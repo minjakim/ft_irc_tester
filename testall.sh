@@ -15,7 +15,7 @@ TEST=$(/bin/ls ./testcases/case)
 for test in ${TEST[@]}
 do
 	clear
-	./test.sh $test
+	./test.sh $test $1
 done
 
 make fclean -C ../

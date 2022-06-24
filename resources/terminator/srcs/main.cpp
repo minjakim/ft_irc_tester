@@ -21,7 +21,7 @@ int
     int                  result;
     bool                 skip = false;
 
-    if (argc < 2)
+    if (argc < 3)
     {
         std::cerr << argv[0] << " <filename>" << std::endl;
         return 1;
@@ -54,7 +54,7 @@ int
             skip = true;
             buffer.pop_back();
         }
-        clients.push_back(new Client(buffer, port));
+        clients.push_back(new Client(buffer, argv[2], port));
         event.m_set(clients.back()->fd, EVFILT_WRITE, EV_ADD, 0, 0,
                     clients.back());
         event.m_set(clients.back()->fd, EVFILT_READ, EV_ADD, 0, 0,
@@ -117,7 +117,7 @@ int
                 event.m_set(client->fd, EVFILT_WRITE, EV_DISABLE, 0, 0, client);
                 if (std::getline(test_case, message, ' '))
                 {
-					sleep(1);
+					usleep(500000);
                     target = atoi(message.data());
                     event.m_set(clients[target]->fd, EVFILT_WRITE, EV_ENABLE, 0,
                                 0, clients[target]);
