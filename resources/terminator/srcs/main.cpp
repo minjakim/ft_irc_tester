@@ -6,20 +6,20 @@
 #include <sstream>
 #include <streambuf>
 #include <unistd.h>
+#include <sys/stat.h>
 #include <vector>
 
-int
-    main(int argc, char** argv)
+int main(int argc, char **argv)
 {
-    std::ifstream        test_case;
-    std::string          test_case_name;
-    std::vector<Client*> clients;
-    Event                event;
-    int                  target;
-    Client*              client;
-    std::string          message;
-    int                  result;
-    bool                 skip = false;
+    std::ifstream test_case;
+    std::string test_case_name;
+    std::vector<Client *> clients;
+    Event event;
+    int target;
+    Client *client;
+    std::string message;
+    int result;
+    bool skip = false;
 
     if (argc < 3)
     {
@@ -46,7 +46,7 @@ int
     // 클라이언트를 서버에 연결
     std::getline(test_case, buffer);
     std::istringstream iss(buffer);
-    struct kevent      tmp;
+    struct kevent tmp;
     while (std::getline(iss, buffer, ','))
     {
         if (buffer.back() == '!')
@@ -61,8 +61,7 @@ int
                     clients.back());
         if (!skip)
         {
-            buffer = "pass 6667\r\nnick " + clients.back()->nick
-                     + "\r\nuser testuser testhost testserver :realname\r\n";
+            buffer = "pass 6667\r\nnick " + clients.back()->nick + "\r\nuser testuser testhost testserver :realname\r\n";
             while (kevent(event._kqueue, NULL, 0, &tmp, 1, &event.timer))
                 if ((int)tmp.ident == clients.back()->fd)
                 {
@@ -76,7 +75,7 @@ int
                     if (tmp.filter == EVFILT_READ)
                     {
                         buffer.resize(tmp.data);
-                        if (read(clients.back()->fd, (void*)buffer.data(),
+                        if (read(clients.back()->fd, (void *)buffer.data(),
                                  tmp.data))
                             clients.back()->buffer.append(buffer);
                         break;
@@ -102,7 +101,7 @@ int
     {
         for (int i = 0; i < count; ++i)
         {
-            client = (Client*)event._events[i].udata;
+            client = (Client *)event._events[i].udata;
             if (event._events[i].filter == EVFILT_WRITE)
             {
                 std::cout << std::setiosflags(std::ios_base::left)
@@ -117,7 +116,7 @@ int
                 event.m_set(client->fd, EVFILT_WRITE, EV_DISABLE, 0, 0, client);
                 if (std::getline(test_case, message, ' '))
                 {
-					usleep(500000);
+                    usleep(500000);
                     target = atoi(message.data());
                     event.m_set(clients[target]->fd, EVFILT_WRITE, EV_ENABLE, 0,
                                 0, clients[target]);
@@ -128,7 +127,7 @@ int
             else if (event._events[i].filter == EVFILT_READ)
             {
                 buffer.resize(event._events[i].data);
-                result = read(event._events[i].ident, (void*)buffer.data(),
+                result = read(event._events[i].ident, (void *)buffer.data(),
                               event._events[i].data);
                 if (result == -1)
                 {
@@ -146,13 +145,13 @@ int
         }
     }
     std::fstream std;
-//    std.open("./testcases/reference/" + test_case_name, std::fstream::out | std::fstream::trunc);
-//    if (std.is_open())
-//    {
-//        for (int i = 0, size = clients.size(); i < size; ++i)
-//            std << "\r\n" << clients[i]->nick << "\r\n" << clients[i]->buffer;
-//        std.close();
-//    }
+    //    std.open("./testcases/reference/" + test_case_name, std::fstream::out | std::fstream::trunc);
+    //    if (std.is_open())
+    //    {
+    //        for (int i = 0, size = clients.size(); i < size; ++i)
+    //            std << "\r\n" << clients[i]->nick << "\r\n" << clients[i]->buffer;
+    //        std.close();
+    //    }
 
     // 로그 읽어와서 비교하기
     std::string test;
@@ -165,14 +164,26 @@ int
         std.read(buffer.begin().base(), test.size());
         std::cout << "===== reference ======" << buffer;
         if (buffer == test)
-            std::cout << '\n' << test_case_name << ":\033[1;32m ok\033[0m" << std::endl;
+            std::cout << '\n'
+                      << test_case_name << ":\033[1;32m ok\033[0m" << std::endl;
         else
         {
-        	std::cout << "===== test ======" << buffer;
-            std::cout << '\n' << test_case_name << ":\033[1;31m ko\033[0m" << std::endl;
-			//std::fstream test_file
-            // diff 파일 생성
-            // diff 파일 출력
+            std::cout << "===== test ======" << test;
+            std::cout << '\n'
+                      << test_case_name << ":\033[1;31m ko\033[0m" << std::endl;
+            std::fstream test_file;
+            mkdir("./testcases/diff", 0755);
+            std::string test_dir = "./testcases/diff/" + test_case_name.substr(0, test_case_name.find_first_of('/'));
+            mkdir(test_dir.data(), 0755);
+            test_file.open("./testcases/diff/" + test_case_name, std::fstream::out | std::fstream::trunc);
+            if (test_file.is_open())
+            {
+                test_file << test;
+                test_file.flush();
+            }
+            std::string diff_str = "diff ./testcases/reference/" + test_case_name + " ./testcases/diff/" + test_case_name + " > ./testcases/diff/" + test_case_name + ".diff || cat ./testcases/diff/" + test_case_name + ".diff";
+            std::cout << diff_str << std::endl;
+            system(diff_str.c_str());
         }
     }
 }
