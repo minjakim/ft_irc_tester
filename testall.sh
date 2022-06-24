@@ -1,5 +1,9 @@
 #!/bin/bash
 
+trap "pkill -P $$" SIGINT
+trap "pkill -P $$" SIGTERM
+trap "pkill -P $$" SIGQUIT
+
 make re -C ../
 make re -C ./resources/terminator/
 
@@ -16,3 +20,8 @@ done
 
 make fclean -C ../
 make fclean -C ./resources/terminator/
+
+
+
+
+pkill -P $$
