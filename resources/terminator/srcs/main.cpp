@@ -172,16 +172,19 @@ int main(int argc, char **argv)
             std::cout << '\n'
                       << test_case_name << ":\033[1;31m ko\033[0m" << std::endl;
             std::fstream test_file;
-            mkdir("./testcases/diff", 0755);
-            std::string test_dir = "./testcases/diff/" + test_case_name.substr(0, test_case_name.find_first_of('/'));
+            mkdir("./diff", 0755);
+            std::string test_dir = "./diff/" + test_case_name.substr(0, test_case_name.find_first_of('/'));
             mkdir(test_dir.data(), 0755);
-            test_file.open("./testcases/diff/" + test_case_name, std::fstream::out | std::fstream::trunc);
+            test_file.open("./diff/" + test_case_name, std::fstream::out | std::fstream::trunc);
             if (test_file.is_open())
             {
                 test_file << test;
                 test_file.flush();
             }
-            std::string diff_str = "diff ./testcases/reference/" + test_case_name + " ./testcases/diff/" + test_case_name + " > ./testcases/diff/" + test_case_name + ".diff || cat ./testcases/diff/" + test_case_name + ".diff";
+            std::string diff_str = "diff ./testcases/reference/"
+				+ test_case_name + " ./diff/" + test_case_name +
+				" > ./diff/" + test_case_name + ".diff || cat ./diff/"
+				+ test_case_name + ".diff";
             std::cout << diff_str << std::endl;
             system(diff_str.c_str());
         }
