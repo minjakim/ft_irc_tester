@@ -5,6 +5,7 @@ trap "pkill -P $$" SIGTERM
 trap "pkill -P $$" SIGQUIT
 
 make re -C ./resources/terminator/
+rm -rf diff/
 
 clear
 
