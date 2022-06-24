@@ -168,7 +168,7 @@ int main(int argc, char **argv)
                       << test_case_name << ":\033[1;32m ok\033[0m" << std::endl;
         else
         {
-            std::cout << "===== test ======" << buffer;
+            std::cout << "===== test ======" << test;
             std::cout << '\n'
                       << test_case_name << ":\033[1;31m ko\033[0m" << std::endl;
             std::fstream test_file;
