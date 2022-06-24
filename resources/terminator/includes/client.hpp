@@ -11,7 +11,7 @@ class Client
     int         port;
     std::string buffer;
 
-    Client(std::string, int);
+    Client(std::string, char*, int);
     ~Client();
 };
 

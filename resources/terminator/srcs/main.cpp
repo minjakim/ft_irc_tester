@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     int result;
     bool skip = false;
 
-    if (argc < 2)
+    if (argc < 3)
     {
         std::cerr << argv[0] << " <filename>" << std::endl;
         return 1;
@@ -54,7 +54,7 @@ int main(int argc, char **argv)
             skip = true;
             buffer.pop_back();
         }
-        clients.push_back(new Client(buffer, port));
+        clients.push_back(new Client(buffer, argv[2], port));
         event.m_set(clients.back()->fd, EVFILT_WRITE, EV_ADD, 0, 0,
                     clients.back());
         event.m_set(clients.back()->fd, EVFILT_READ, EV_ADD, 0, 0,

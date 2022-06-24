@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-Client::Client(std::string nick, int port) : nick(nick), port(port)
+Client::Client(std::string nick, char* ip, int port) : nick(nick), port(port)
 {
     fd = socket(AF_INET, SOCK_STREAM, 0);
     if (fd == -1)
@@ -23,7 +23,7 @@ Client::Client(std::string nick, int port) : nick(nick), port(port)
 
     memset(&sock, 0, sizeof(sockaddr_in));
     sock.sin_family      = AF_INET;
-    sock.sin_addr.s_addr = inet_addr("127.0.0.1");
+    sock.sin_addr.s_addr = inet_addr(ip);
     sock.sin_port        = htons(port);
     if (connect(fd, (sockaddr*)&sock, sizeof(sockaddr_in)) == -1)
     {

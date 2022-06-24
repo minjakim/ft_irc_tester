@@ -4,10 +4,8 @@ trap "pkill -P $$" SIGINT
 trap "pkill -P $$" SIGTERM
 trap "pkill -P $$" SIGQUIT
 
-make re -C ../
 make re -C ./resources/terminator/
 
-../ircserv 6667 6667 > /dev/null 2> /dev/null&
 clear
 
 TEST=$(/bin/ls ./testcases/case)
@@ -15,13 +13,15 @@ TEST=$(/bin/ls ./testcases/case)
 for test in ${TEST[@]}
 do
 	clear
-	./test.sh $test $1
+	CASE=$(/bin/ls ./testcases/case/$test)
+		for case in ${CASE[@]}
+		do
+			echo $test
+			echo $case
+			./resources/terminator/tester ./testcases/case/$test/$case $1
+		done
 done
 
 make fclean -C ../
 make fclean -C ./resources/terminator/
-
-
-
-
 pkill -P $$
