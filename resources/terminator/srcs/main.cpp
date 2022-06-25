@@ -145,13 +145,13 @@ int main(int argc, char **argv)
         }
     }
     std::fstream std;
-    //    std.open("./testcases/reference/" + test_case_name, std::fstream::out | std::fstream::trunc);
-    //    if (std.is_open())
-    //    {
-    //        for (int i = 0, size = clients.size(); i < size; ++i)
-    //            std << "\r\n" << clients[i]->nick << "\r\n" << clients[i]->buffer;
-    //        std.close();
-    //    }
+        //std.open("./testcases/reference/" + test_case_name, std::fstream::out | std::fstream::trunc);
+        //if (std.is_open())
+        //{
+        //    for (int i = 0, size = clients.size(); i < size; ++i)
+        //        std << "\r\n" << clients[i]->nick << "\r\n" << clients[i]->buffer;
+        //    std.close();
+        //}
 
     // 로그 읽어와서 비교하기
     std::string test;

@@ -3,6 +3,7 @@ one
 :ft_ircd 001 one Welcome to Internet Relay Network
 one!testuser@localhost
 :one!testuser@localhost JOIN #a
+:one!testuser@localhost JOIN #a
 :ft_ircd 331 one #a :No topic is set
 :ft_ircd 353 one = #a :@one 
 :ft_ircd 366 one #a :End of NAMES list
@@ -10,6 +11,7 @@ one!testuser@localhost
 two
 :ft_ircd 001 two Welcome to Internet Relay Network
 two!testuser@localhost
+:two!testuser@localhost JOIN #b
 :two!testuser@localhost JOIN #b
 :ft_ircd 331 two #b :No topic is set
 :ft_ircd 353 two = #b :@two 
