@@ -3,7 +3,6 @@ operator
 :ft_ircd 001 operator Welcome to Internet Relay Network
 operator!testuser@localhost
 :operator!testuser@localhost JOIN #channel
-:operator!testuser@localhost JOIN #channel
 :ft_ircd 331 operator #channel :No topic is set
 :ft_ircd 353 operator = #channel :@operator 
 :ft_ircd 366 operator #channel :End of NAMES list

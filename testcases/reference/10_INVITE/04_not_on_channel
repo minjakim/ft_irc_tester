@@ -8,7 +8,6 @@ two
 :ft_ircd 001 two Welcome to Internet Relay Network
 two!testuser@localhost
 :two!testuser@localhost JOIN #channel
-:two!testuser@localhost JOIN #channel
 :ft_ircd 331 two #channel :No topic is set
 :ft_ircd 353 two = #channel :@two 
 :ft_ircd 366 two #channel :End of NAMES list

@@ -3,7 +3,6 @@ one
 :ft_ircd 001 one Welcome to Internet Relay Network
 one!testuser@localhost
 :one!testuser@localhost JOIN #channel
-:one!testuser@localhost JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
 :ft_ircd 353 one = #channel :@one 
 :ft_ircd 366 one #channel :End of NAMES list
@@ -13,12 +12,8 @@ one!testuser@localhost
 :five!testuser@localhost JOIN #channel
 :six!testuser@localhost JOIN #channel
 :one!testuser@localhost KICK #channel two one
-:one!testuser@localhost KICK #channel two one
-:one!testuser@localhost KICK #channel three one
 :one!testuser@localhost KICK #channel three one
 :one!testuser@localhost KICK #channel four one
-:one!testuser@localhost KICK #channel four one
-:one!testuser@localhost KICK #channel five one
 :one!testuser@localhost KICK #channel five one
 
 two

@@ -4,7 +4,6 @@ one
 one!testuser@localhost
 :ft_ircd 401 one two :No such nick
 :one!testuser@localhost JOIN #channel
-:one!testuser@localhost JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
 :ft_ircd 353 one = #channel :@one 
 :ft_ircd 366 one #channel :End of NAMES list

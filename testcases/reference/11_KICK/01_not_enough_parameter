@@ -203,31 +203,25 @@ six
 :ft_ircd 001 six Welcome to Internet Relay Network
 six!testuser@localhost
 :six!testuser@localhost JOIN #a
-:six!testuser@localhost JOIN #a
 :ft_ircd 331 six #a :No topic is set
 :ft_ircd 353 six = #a :@six 
 :ft_ircd 366 six #a :End of NAMES list
-:six!testuser@localhost JOIN #b
 :six!testuser@localhost JOIN #b
 :ft_ircd 331 six #b :No topic is set
 :ft_ircd 353 six = #b :@six 
 :ft_ircd 366 six #b :End of NAMES list
 :six!testuser@localhost JOIN #c
-:six!testuser@localhost JOIN #c
 :ft_ircd 331 six #c :No topic is set
 :ft_ircd 353 six = #c :@six 
 :ft_ircd 366 six #c :End of NAMES list
-:six!testuser@localhost JOIN #d
 :six!testuser@localhost JOIN #d
 :ft_ircd 331 six #d :No topic is set
 :ft_ircd 353 six = #d :@six 
 :ft_ircd 366 six #d :End of NAMES list
 :six!testuser@localhost JOIN #e
-:six!testuser@localhost JOIN #e
 :ft_ircd 331 six #e :No topic is set
 :ft_ircd 353 six = #e :@six 
 :ft_ircd 366 six #e :End of NAMES list
-:six!testuser@localhost JOIN #f
 :six!testuser@localhost JOIN #f
 :ft_ircd 331 six #f :No topic is set
 :ft_ircd 353 six = #f :@six 

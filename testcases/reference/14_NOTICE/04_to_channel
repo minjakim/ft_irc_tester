@@ -3,13 +3,11 @@ one
 :ft_ircd 001 one Welcome to Internet Relay Network
 one!testuser@localhost
 :one!testuser@localhost JOIN #channel
-:one!testuser@localhost JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
 :ft_ircd 353 one = #channel :@one 
 :ft_ircd 366 one #channel :End of NAMES list
 :two!testuser@localhost JOIN #channel
 :three!testuser@localhost JOIN #channel
-:one!testuser@localhost NOTICE #channel :hello world
 
 two
 :ft_ircd 001 two Welcome to Internet Relay Network

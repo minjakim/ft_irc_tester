@@ -3,7 +3,6 @@ a00
 :ft_ircd 001 a00 Welcome to Internet Relay Network
 a00!testuser@localhost
 :a00!testuser@localhost JOIN #channel
-:a00!testuser@localhost JOIN #channel
 :ft_ircd 331 a00 #channel :No topic is set
 :ft_ircd 353 a00 = #channel :@a00 
 :ft_ircd 366 a00 #channel :End of NAMES list
