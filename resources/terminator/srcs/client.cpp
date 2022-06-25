@@ -17,7 +17,6 @@ Client::Client(std::string nick, char* ip, int port) : nick(nick), port(port)
         exit(EXIT_FAILURE);
     }
 
-    fcntl(fd, O_NONBLOCK);
 
     sockaddr_in sock;
 
@@ -32,6 +31,7 @@ Client::Client(std::string nick, char* ip, int port) : nick(nick), port(port)
         std::cerr << "errno " << errno << " " << strerror(errno) << std::endl;
         exit(1);
     }
+    fcntl(fd, O_NONBLOCK);
 }
 
 Client::~Client()
