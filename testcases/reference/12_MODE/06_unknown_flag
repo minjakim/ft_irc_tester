@@ -7,11 +7,9 @@ test!testuser@localhost
 :ft_ircd 353 test = #channel :@test 
 :ft_ircd 366 test #channel :End of NAMES list
 :ft_ircd 472 test ! :Unknown MODE flag
-:ft_ircd 324 test #channel +
 :ft_ircd 472 test k :Unknown MODE flag
 :ft_ircd 472 test l :Unknown MODE flag
 :ft_ircd 472 test a :Unknown MODE flag
-:ft_ircd 324 test #channel +
 :ft_ircd 472 test j :Unknown MODE flag
 :ft_ircd 472 test k :Unknown MODE flag
 :ft_ircd 472 test l :Unknown MODE flag
@@ -20,7 +18,6 @@ test!testuser@localhost
 :ft_ircd 472 test x :Unknown MODE flag
 :ft_ircd 472 test w :Unknown MODE flag
 :ft_ircd 472 test g :Unknown MODE flag
-:ft_ircd 324 test #channel +
 :ft_ircd 472 test ! :Unknown MODE flag
 :ft_ircd 472 test 2 :Unknown MODE flag
 :ft_ircd 472 test j :Unknown MODE flag
