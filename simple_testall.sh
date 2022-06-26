@@ -1,8 +1,14 @@
 #!/bin/bash
 
-trap "pkill -P $$" SIGINT
-trap "pkill -P $$" SIGTERM
-trap "pkill -P $$" SIGQUIT
+trap "pkill -P $$; exit" SIGINT
+trap "pkill -P $$; exit" SIGTERM
+trap "pkill -P $$; exit" SIGQUIT
+
+if [ $# -eq 0 ]; then
+	IP="127.0.0.1"
+else
+	IP=$1
+fi
 
 make re -C ../
 make re -C ./resources/terminator/
@@ -21,7 +27,7 @@ do
 		do
 			echo $test
 			echo $case
-			./resources/terminator/tester ./testcases/case/$test/$case $1
+			./resources/terminator/tester ./testcases/case/$test/$case $IP
 		done
 done
 
