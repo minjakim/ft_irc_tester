@@ -84,9 +84,9 @@ int
     argc -= 2;
     int         fd[argc];
     std::string nick = argv[1];
-    std::string register_message =
-        "pass 1234\r\nnick " + nick +
-        "\r\nuser testuser testhost testservername :test realname\r\n";
+    std::string register_message
+        = "pass 1234\r\nnick " + nick
+          + "\r\nuser testuser testhost testservername :test realname\r\n";
 
     if ((kq = kqueue()) == -1)
         return (1);
@@ -129,8 +129,8 @@ int
             for (i = 0; i < count; ++i)
             {
                 buffer.resize(events[i].data);
-                len =
-                    read(events[i].ident, (void*)buffer.data(), events[i].data);
+                len         = read(events[i].ident, (void*)buffer.data(),
+                                   events[i].data);
                 buffer[len] = '\0';
                 server_buffers[events[i].ident].append(buffer);
             }
@@ -146,8 +146,9 @@ int
                 if (server_buffers[fd[i]].find("PING") != std::string::npos)
                     write(fd[i], "PONG test\r\n", 11);
                 pos = 0;
-                while ((pos = server_buffers[fd[i]].find(
-                            server_trims[i].data(), pos)) != std::string::npos)
+                while ((pos = server_buffers[fd[i]].find(server_trims[i].data(),
+                                                         pos))
+                       != std::string::npos)
                     server_buffers[fd[i]].replace(pos, server_trims[i].length(),
                                                   "");
                 std::cout << "---------------------------\n"

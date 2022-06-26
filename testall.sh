@@ -27,7 +27,7 @@ do
 	do
 		echo $test
 		echo $case
-		./resources/terminator/tester ./testcases/case/$test/$case $IP
+		./resources/terminator/tester ./testcases/case/$test/$case 6667 $IP
 		read
 		clear
 	done

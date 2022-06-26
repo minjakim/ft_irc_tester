@@ -7,8 +7,8 @@ class Client
 {
   public:
     int         fd;
-    std::string nick;
     int         port;
+    std::string nick;
     std::string buffer;
 
     Client(std::string, char*, int);

@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-Client::Client(std::string nick, char* ip, int port) : nick(nick), port(port)
+Client::Client(std::string nick, char* ip, int port) : port(port), nick(nick)
 {
     fd = socket(AF_INET, SOCK_STREAM, 0);
     if (fd == -1)
@@ -16,7 +16,6 @@ Client::Client(std::string nick, char* ip, int port) : nick(nick), port(port)
         std::cerr << "socet create fail" << std::endl;
         exit(EXIT_FAILURE);
     }
-
 
     sockaddr_in sock;
 

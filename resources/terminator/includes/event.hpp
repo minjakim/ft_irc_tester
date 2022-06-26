@@ -13,11 +13,11 @@ class Event
 {
   private:
     Event(const Event&);
-    Event&   operator=(const Event&);
+    Event& operator=(const Event&);
 
   public:
-    int      _kqueue;
-    timespec timer;
+    int           _kqueue;
+    timespec      timer;
     void          m_set(int     identity,
                         short   filter,
                         u_short flags,

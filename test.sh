@@ -22,7 +22,7 @@ for case in ${CASE[@]}
 do
 	echo $1
 	echo $case
-	./resources/terminator/tester ./testcases/case/$1/$case $IP
+	./resources/terminator/tester ./testcases/case/$1/$case 6667 $IP
 	read
 	clear
 done

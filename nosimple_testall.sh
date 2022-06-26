@@ -19,7 +19,7 @@ do
 		do
 			echo $test
 			echo $case
-			./resources/terminator/tester ./testcases/case/$test/$case $1
+			./resources/terminator/tester ./testcases/case/$test/$case 6667 $1
 		done
 done
 
