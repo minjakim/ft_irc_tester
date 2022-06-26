@@ -4,11 +4,12 @@ trap "pkill -P $$; exit" SIGINT
 trap "pkill -P $$; exit" SIGTERM
 trap "pkill -P $$; exit" SIGQUIT
 
-if [ $# -eq 3 ]; then
+if [ $# -eq 2 ]; then
 	IP=$2
 else
 	IP="127.0.0.1"
 fi
+echo $IP
 
 name=$(ls ./testcases/case | grep $1)
 
