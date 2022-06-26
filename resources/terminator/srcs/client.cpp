@@ -17,7 +17,6 @@ Client::Client(std::string nick, char* ip, int port) : nick(nick), port(port)
         exit(EXIT_FAILURE);
     }
 
-
     sockaddr_in sock;
 
     memset(&sock, 0, sizeof(sockaddr_in));

@@ -5,25 +5,26 @@
 #include <iostream>
 #include <sstream>
 #include <streambuf>
-#include <unistd.h>
 #include <sys/stat.h>
+#include <unistd.h>
 #include <vector>
 
-std::vector<Client *> clients;
-std::string test_case_name;
-std::ifstream test_case;
-std::fstream reference;
-std::string message;
-std::string buffer;
-Client *client;
-Event event;
-int result;
-int count;
-int port;
-int target;
-bool skip = false;
+std::vector<Client*> clients;
+std::string          test_case_name;
+std::ifstream        test_case;
+std::fstream         reference;
+std::string          message;
+std::string          buffer;
+Client*              client;
+Event                event;
+int                  result;
+int                  count;
+int                  port;
+int                  target;
+bool                 skip = false;
 
-void compare_result()
+void
+    compare_result()
 {
     // 로그 읽어와서 비교하기
     std::string test;
@@ -45,43 +46,50 @@ void compare_result()
                       << test_case_name << ":\033[1;31m ko\033[0m" << std::endl;
             std::fstream test_file;
             mkdir("./diff", 0755);
-            std::string test_dir = "./diff/" + test_case_name.substr(0, test_case_name.find_first_of('/'));
+            std::string test_dir
+                = "./diff/"
+                  + test_case_name.substr(0, test_case_name.find_first_of('/'));
             mkdir(test_dir.data(), 0755);
-            test_file.open("./diff/" + test_case_name, std::fstream::out | std::fstream::trunc);
+            test_file.open("./diff/" + test_case_name,
+                           std::fstream::out | std::fstream::trunc);
             if (test_file.is_open())
             {
                 test_file << test;
                 test_file.flush();
             }
-            std::string diff_str = "diff ./testcases/reference/"
-				+ test_case_name + " ./diff/" + test_case_name +
-				" > ./diff/" + test_case_name + ".diff || cat ./diff/"
-				+ test_case_name + ".diff";
+            std::string diff_str
+                = "diff ./testcases/reference/" + test_case_name + " ./diff/"
+                  + test_case_name + " > ./diff/" + test_case_name
+                  + ".diff || cat ./diff/" + test_case_name + ".diff";
             std::cout << diff_str << std::endl;
             system(diff_str.c_str());
         }
     }
 }
 
-void make_reference()
+void
+    make_reference()
 {
-	reference.open("./testcases/reference/" + test_case_name,
-			std::fstream::out | std::fstream::trunc);
-	if (reference.is_open())
-	{
-		for (int i = 0, size = clients.size(); i < size; ++i)
-			reference << "\r\n" << clients[i]->nick << "\r\n" << clients[i]->buffer;
-		reference.close();
-	}
+    reference.open("./testcases/reference/" + test_case_name,
+                   std::fstream::out | std::fstream::trunc);
+    if (reference.is_open())
+    {
+        for (int i = 0, size = clients.size(); i < size; ++i)
+            reference << "\r\n"
+                      << clients[i]->nick << "\r\n"
+                      << clients[i]->buffer;
+        reference.close();
+    }
 }
 
-int process_testcase()
+int
+    process_testcase()
 {
     while ((count = event.kevent()) > 0)
     {
         for (int i = 0; i < count; ++i)
         {
-            client = (Client *)event._events[i].udata;
+            client = (Client*)event._events[i].udata;
             if (event._events[i].filter == EVFILT_WRITE)
             {
                 std::cout << std::setiosflags(std::ios_base::left)
@@ -107,7 +115,7 @@ int process_testcase()
             else if (event._events[i].filter == EVFILT_READ)
             {
                 buffer.resize(event._events[i].data);
-                result = read(event._events[i].ident, (void *)buffer.data(),
+                result = read(event._events[i].ident, (void*)buffer.data(),
                               event._events[i].data);
                 if (result == -1)
                 {
@@ -124,10 +132,11 @@ int process_testcase()
             }
         }
     }
-	return 0;
+    return 0;
 }
 
-void prepare_first_message()
+void
+    prepare_first_message()
 {
     if (std::getline(test_case, message, ' '))
     {
@@ -139,12 +148,13 @@ void prepare_first_message()
     }
 }
 
-void connect_client_to_server(char *ip)
+void
+    connect_client_to_server(char* ip)
 {
     // 클라이언트를 서버에 연결
     std::getline(test_case, buffer);
     std::istringstream iss(buffer);
-    struct kevent tmp;
+    struct kevent      tmp;
     while (std::getline(iss, buffer, ','))
     {
         if (buffer.back() == '!')
@@ -159,8 +169,8 @@ void connect_client_to_server(char *ip)
                     clients.back());
         if (!skip)
         {
-            buffer = "pass 6667\r\nnick " + clients.back()->nick +
-				"\r\nuser testuser testhost testserver :realname\r\n";
+            buffer = "pass 6667\r\nnick " + clients.back()->nick
+                     + "\r\nuser testuser testhost testserver :realname\r\n";
             while (kevent(event._kqueue, NULL, 0, &tmp, 1, &event.timer))
                 if ((int)tmp.ident == clients.back()->fd)
                 {
@@ -174,7 +184,7 @@ void connect_client_to_server(char *ip)
                     if (tmp.filter == EVFILT_READ)
                     {
                         buffer.resize(tmp.data);
-                        if (read(clients.back()->fd, (void *)buffer.data(),
+                        if (read(clients.back()->fd, (void*)buffer.data(),
                                  tmp.data))
                             clients.back()->buffer.append(buffer);
                         break;
@@ -189,8 +199,8 @@ void connect_client_to_server(char *ip)
     }
 }
 
-
-int initialize(int argc, char **argv)
+int
+    initialize(int argc, char** argv)
 {
     if (argc < 3)
     {
@@ -212,17 +222,18 @@ int initialize(int argc, char **argv)
     port = atoi(buffer.c_str());
     // kqueue 생성
     event.initialize();
-	return 0;
+    return 0;
 }
 
-int main(int argc, char **argv)
+int
+    main(int argc, char** argv)
 {
-	if (initialize(argc, argv))
-		return 1;
-	connect_client_to_server(argv[2]);
-	prepare_first_message();
-	if (process_testcase())
-		return 1;
-	//make_reference();
-	compare_result();
+    if (initialize(argc, argv))
+        return 1;
+    connect_client_to_server(argv[2]);
+    prepare_first_message();
+    if (process_testcase())
+        return 1;
+    // make_reference();
+    compare_result();
 }
