@@ -1,0 +1,4 @@
+test
+|mode
+
+:ft_ircd 461 test MODE :Not enough parameters

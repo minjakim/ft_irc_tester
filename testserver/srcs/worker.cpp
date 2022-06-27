@@ -9,7 +9,7 @@ void
 }
 
 void
-    Worker::flush(bool mode)
+    Worker::flush()
 {
     std::fstream result;
 
@@ -17,10 +17,9 @@ void
     _length          = read(_fd, _buffer, BUFFER_MAX);
     _buffer[_length] = '\0';
     _result.append(_buffer);
-    result.open((mode ? CASE : REF) + _path + "result",
-                std::fstream::out | std::fstream::app);
+    result.open(DIR + _path + RESULT, std::fstream::out | std::fstream::app);
     if (result.is_open())
-        result << _nick << "\n" << _result << "\n";
+        result << _nick << "\n" << _result;
     result.flush();
     result.close();
 }

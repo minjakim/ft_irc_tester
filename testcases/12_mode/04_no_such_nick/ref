@@ -1,0 +1,4 @@
+one
+|mode two
+
+:ft_ircd 401 one two :No such nick

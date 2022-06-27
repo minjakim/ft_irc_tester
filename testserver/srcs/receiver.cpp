@@ -8,8 +8,8 @@ void
     result.append(" >> diff");
     system(result.c_str());
     std::string diff("diff ");
-    diff.append(REF + path + "result ");
-    diff.append(CASE + path + "result ");
+    diff.append(DIR + path + "result ");
+    diff.append(DIR + path + "ref ");
     diff.append(">> diff");
     system(diff.c_str());
 }
@@ -18,8 +18,7 @@ void
     Receiver::m_trunc(const std::string& path)
 {
     std::fstream result;
-    result.open(CASE + path + "result",
-                std::fstream::out | std::fstream::trunc);
+    result.open(path + "result", std::fstream::out | std::fstream::trunc);
     if (result.is_open())
         result.close();
 }
@@ -33,7 +32,9 @@ void
     Worker worker[nicks.size()];
     int    size = nicks.size();
 
+#if REF == 0
     m_trunc(lines[0]);
+#endif
     if (nicks[0].front() == '!')
     {
         mode = true;
@@ -52,10 +53,12 @@ void
         sleep(1);
     }
     for (int i = 0; i < size; ++i)
-        worker[i].flush(true);
+        worker[i].flush();
     for (int i = 0; i < size; ++i)
         worker[i].quit();
+#if REF == 0
     m_diff(lines[0]);
+#endif
 }
 
 void

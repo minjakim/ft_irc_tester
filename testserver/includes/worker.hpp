@@ -19,6 +19,6 @@ class Worker
     ~Worker(){};
     Worker(std::string&, std::string&, std::string&, int);
     void run();
-    void flush(bool mode);
+    void flush();
     void quit();
 };

@@ -1,0 +1,4 @@
+test
+|join
+
+:ft_ircd 461 test JOIN :Not enough parameters

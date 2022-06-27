@@ -1,7 +1,0 @@
-test
-|nick money$$|nick start**|nick shap##
-
-:ft_ircd 432 * money$$ :Erroneus nickname
-:ft_ircd 432 * start** :Erroneus nickname
-:ft_ircd 432 * shap## :Erroneus nickname
-

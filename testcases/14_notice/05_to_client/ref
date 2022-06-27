@@ -1,0 +1,4 @@
+one
+|notice one :say hello to myself
+
+:one!user@localhost NOTICE one :say hello to myself

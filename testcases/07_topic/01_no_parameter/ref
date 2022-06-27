@@ -1,0 +1,4 @@
+test
+|topic
+
+:ft_ircd 461 test TOPIC :Not enough parameters

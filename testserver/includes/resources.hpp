@@ -11,8 +11,14 @@
 #include <unistd.h>
 #include <vector>
 
-#define REF  "testcases/ref/"
-#define CASE "testcases/case/"
+#define REF 0
+#define DIR "./testcases/"
+
+#if REF == 0
+#define RESULT "result"
+#else
+#define RESULT "ref"
+#endif
 
 #define PORT_MAX 65535
 

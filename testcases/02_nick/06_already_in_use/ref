@@ -1,0 +1,8 @@
+one
+|nick one|privmsg one hi
+
+:one!user@localhost PRIVMSG one :hi
+two
+|nick one
+
+:ft_ircd 433 two one :Nickname is already in use

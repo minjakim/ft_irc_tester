@@ -1,5 +1,0 @@
-test
-|mode #channel
-
-:ft_ircd 403 test #channel :No such channel
-

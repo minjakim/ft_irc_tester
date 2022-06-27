@@ -1,0 +1,16 @@
+one
+|join #ch
+
+:one!user@localhost JOIN #ch
+:ft_ircd 331 one #ch :No topic is set
+:ft_ircd 353 one = #ch :@one 
+:ft_ircd 366 one #ch :End of NAMES list
+:two!user@localhost JOIN #ch
+:two!user@localhost NOTICE #ch :hello world
+two
+|join #ch|notice #ch :hello world
+
+:two!user@localhost JOIN #ch
+:ft_ircd 331 two #ch :No topic is set
+:ft_ircd 353 two = #ch :@one two 
+:ft_ircd 366 two #ch :End of NAMES list

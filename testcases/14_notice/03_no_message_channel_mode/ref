@@ -1,0 +1,12 @@
+one
+|join #channel|mode #channel +n
+
+:one!user@localhost JOIN #channel
+:ft_ircd 331 one #channel :No topic is set
+:ft_ircd 353 one = #channel :@one 
+:ft_ircd 366 one #channel :End of NAMES list
+:one!user@localhost MODE #channel +n
+two
+|notice #channel
+
+:ft_ircd 412 two :No text to send
