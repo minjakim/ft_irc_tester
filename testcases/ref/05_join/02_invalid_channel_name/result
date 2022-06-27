@@ -1,7 +1,0 @@
-test
-|join channel|join : channel|join :#channel space
-
-:ft_ircd 403 test channel :No such channel
-:ft_ircd 403 test  channel :No such channel
-:ft_ircd 403 test #channel space :No such channel
-

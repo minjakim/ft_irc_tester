@@ -1,5 +1,0 @@
-one
-|notice #channel :hello world
-
-:ft_ircd 403 one #channel :No such channel
-

@@ -1,5 +1,0 @@
-test
-|nick normal|nick gam[42]|nick gon{1}|nick top-gun|nick a|\`
-
-:ft_ircd 421 a \` :Unknown command
-

@@ -1,6 +1,0 @@
-one
-|privmsg one|privmsg :hello world
-
-:ft_ircd 412 one :No text to send
-:ft_ircd 412 one :No text to send
-
