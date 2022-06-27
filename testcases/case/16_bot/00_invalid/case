@@ -1,5 +1,3 @@
 16_bot/00_invalid/
-one,two
+one
 privmsg two /help|privmsg bot time|privmsg bot coin
-privmsg bot helpprivmsg two /help
-privmsg bot /help

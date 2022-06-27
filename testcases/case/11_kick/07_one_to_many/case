@@ -1,8 +1,9 @@
 11_kick/07_one_to_many/
-one,two,three,four,five,six
+!one,two,three,four,five,six
 join #channel
 join #channel
 join #channel
 join #channel
 join #channel
-join #channel|kick #channel two,three,four,five|names #channel
+join #channel
+kick #channel two,three,four,five

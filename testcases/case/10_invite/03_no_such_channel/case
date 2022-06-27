@@ -1,3 +1,4 @@
 10_invite/03_no_such_channel/
 one,two
 invite two #channel
+invite one #channel

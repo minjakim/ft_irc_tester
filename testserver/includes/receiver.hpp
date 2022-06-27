@@ -8,9 +8,6 @@
 
 class Receiver : public Socket, public Event
 {
-  public:
-    typedef std::vector<std::string> t_vstr;
-
   private:
     Receiver(const Receiver&);
     Receiver& operator=(const Receiver&);
@@ -24,9 +21,8 @@ class Receiver : public Socket, public Event
     void m_diff(const std::string& path);
     void m_send();
 
-    Client* _client;
-    int     _port;
-    Event   _event;
+    Client _client;
+    int    _port;
 
   public:
     Receiver(int, int);

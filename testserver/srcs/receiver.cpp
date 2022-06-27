@@ -4,7 +4,7 @@ void
     Receiver::m_diff(const std::string& path)
 {
     std::string result("echo ");
-    result.append("\n\n---" + path + "\n\n");
+    result.append("\n\n" + path + "\n\n");
     result.append(" >> ../diff");
     system(result.c_str());
     std::string diff("diff ");
@@ -27,11 +27,11 @@ void
 void
     Receiver::m_received()
 {
-    bool             mode  = false;
-    Receiver::t_vstr lines = split(Socket::_buffer, '\n');
-    Receiver::t_vstr nicks = split(lines[1], ',');
-    Worker           worker[nicks.size()];
-    int              size = lines.size();
+    bool   mode  = false;
+    t_vstr lines = split(Socket::_buffer, '\n');
+    t_vstr nicks = split(lines[1], ',');
+    Worker worker[nicks.size()];
+    int    size = lines.size();
 
     m_trunc(lines[0]);
     if (nicks[0].front() == '!')
@@ -54,6 +54,8 @@ void
     }
     for (int i = 0; i < size; ++i)
         worker[i].flush(true);
+    for (int i = 0; i < size; ++i)
+        worker[i].quit();
 }
 
 void
@@ -62,7 +64,11 @@ void
     if (0 < Socket::receive(_events[Event::_index]))
         m_received();
     else if (Socket::_result == 0)
-        exit(0);
+    {
+        Socket::close(_fd);
+        Event::remove(_fd);
+        Event::toggle(Socket::_socket.fd, EV_ENABLE);
+    }
 }
 
 void
@@ -70,7 +76,8 @@ void
 {
     if (Socket::accept() == -1)
         return;
-    Event::add(new Client(_addr, _fd));
+    Event::add(_fd);
+    Event::toggle(Socket::_socket.fd, EV_DISABLE);
 }
 
 void
@@ -83,7 +90,7 @@ void
         count = Event::kevent();
         for (Event::_index = 0; Event::_index < count; ++Event::_index)
         {
-            _client = (Client*)_events[Event::_index].udata;
+            _fd = _events[Event::_index].ident;
             if (_events[Event::_index].ident == (unsigned)_socket.fd)
                 m_accept();
             else if (_events[Event::_index].filter == EVFILT_READ)
@@ -100,7 +107,6 @@ Receiver::Receiver(int port, int target) : _port(target)
 {
     Socket::initialize(port);
     Event::initialize(_socket.fd);
-    //_event.initialize();
     signal(SIGPIPE, SIG_IGN);
 }
 

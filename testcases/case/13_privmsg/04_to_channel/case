@@ -1,5 +1,4 @@
 13_privmsg/04_to_channel/
-one,two,three
-join #channel
+one,two
 join #channel
 join #channel|privmsg #channel :hello world

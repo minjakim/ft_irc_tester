@@ -2,6 +2,7 @@
 #define SOCKET_HPP
 
 #include <arpa/inet.h>
+#include <fcntl.h>
 
 #define IPV4_MTU_MAX 65535
 

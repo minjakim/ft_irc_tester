@@ -1,4 +1,4 @@
 13_privmsg/05_to_client/
-one,two,three
+one,two
 privmsg one :say hello to myself|privmsg two :hi there?
-join #channel|privmsg three :hi there?
+join #channel

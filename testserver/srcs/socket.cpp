@@ -1,8 +1,7 @@
 #include "../includes/socket.hpp"
 #include "../includes/client.hpp"
-#include <fcntl.h>
+
 #include <sys/event.h>
-#include <unistd.h>
 
 Socket::~Socket()
 {

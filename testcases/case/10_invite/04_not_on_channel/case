@@ -1,4 +1,4 @@
 10_invite/04_not_on_channel/
-one,two,three
+one,two
 join #channel
-invite three #channel
+invite one #channel

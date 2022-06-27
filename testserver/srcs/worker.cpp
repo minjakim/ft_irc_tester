@@ -1,11 +1,11 @@
 #include "../includes/worker.hpp"
-#include <fcntl.h>
 #include <sys/socket.h>
-#include <unistd.h>
 
 void
     Worker::quit()
 {
+    write(_fd, "quit\r\n", 6);
+    close(_fd);
 }
 
 void
@@ -68,6 +68,6 @@ Worker::Worker(std::string& path, std::string& nick, std::string& job, int port)
     socket.sin_addr.s_addr = inet_addr("127.0.0.1");
     socket.sin_port        = htons(port);
     if (::connect(_fd, (sockaddr*)&socket, sizeof(sockaddr_in)) == -1)
-        std::cout << "link failed" << std::endl;
+        std::cerr << "link failed" << std::endl;
     check();
 }

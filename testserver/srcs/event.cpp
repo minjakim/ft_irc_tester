@@ -24,12 +24,9 @@ void
 }
 
 void
-    Event::toggle(Client& client, int EVFILT_TYPE)
+    Event::toggle(int socket_fd, int EV_TYPE)
 {
-    m_set(client.get_fd(), EVFILT_TYPE, EV_DISABLE, 0, 0, &client);
-    m_set(client.get_fd(),
-          (EVFILT_TYPE == EVFILT_READ ? EVFILT_WRITE : EVFILT_READ), EV_ENABLE,
-          0, 0, &client);
+    m_set(socket_fd, EVFILT_WRITE, EV_TYPE, 0, 0, NULL);
 }
 
 void
@@ -40,10 +37,10 @@ void
 }
 
 void
-    Event::add(Client* client)
+    Event::add(int fd)
 {
-    m_set(client->get_fd(), EVFILT_READ, EV_ADD, 0, 0, client);
-    m_set(client->get_fd(), EVFILT_WRITE, EV_ADD | EV_DISABLE, 0, 0, client);
+    m_set(fd, EVFILT_READ, EV_ADD, 0, 0, NULL);
+    m_set(fd, EVFILT_WRITE, EV_ADD | EV_DISABLE, 0, 0, NULL);
 }
 
 int

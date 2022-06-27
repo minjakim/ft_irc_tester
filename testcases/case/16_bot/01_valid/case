@@ -1,4 +1,3 @@
 16_bot/01_valid/
-one,two
-join #a|privmsg bot /help|privmsg bot /time|privmsg bot /coin
-privmsg bot /help|privmsg bot /|privmsg bot :/co/
+one
+privmsg bot /help

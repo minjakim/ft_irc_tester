@@ -1,4 +1,4 @@
 14_notice/03_no_message_channel_mode/
 one,two
-
-in #channel|mode #channel +n|tice #channel|
+join #channel|mode #channel +n
+notice #channel
