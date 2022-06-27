@@ -1,3 +1,0 @@
-06_part/05_part_from_channels/
-one,two|join #a,#b,#c,#d,#e,#f,#g
-1 join #a,#b,#c,#d,#e,#f,#g|part #a,#b,#c,#d,#e,#f,#g

@@ -1,5 +1,0 @@
-11_kick/06_one_to_one/
-one,two,three|join #channel
-1 join #channel
-2 join #channel|kick #channel two
-2 names #channel

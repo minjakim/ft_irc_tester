@@ -1,4 +1,0 @@
-07_topic/04_not_channel_operator/
-one,two|join #channel
-1 join #channel|mode #channel +t
-1 topic #channel :hi~

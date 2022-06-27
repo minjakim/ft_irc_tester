@@ -1,5 +1,0 @@
-14_notice/03_no_message_channel_mode/
-one,two|join #channel|mode #channel +n
-1 notice #channel :hello world
-1 join #channel
-1 notice #channel :god of thunder

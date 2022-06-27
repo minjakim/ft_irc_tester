@@ -1,4 +1,0 @@
-09_list/03_channels/
-one,two,three|join #a,#b,#c,#d
-1 join #a,#b,#c
-2 join #a,#b|list #a|list #a,#b,#c

@@ -1,7 +1,0 @@
-07_topic/06_topic/
-one,two|join #channel
-1 join #channel|topic #channel
-1 topic #channel|topic #channel :hi~|topic #channel
-1 topic #channel
-1 topic #channel :hello~|topic #channel
-1 topic #channel
