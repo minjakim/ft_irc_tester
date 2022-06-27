@@ -1,0 +1,10 @@
+one
+|invite two #channel
+
+:ft_ircd 403 one #channel :No such channel
+
+two
+|invite one #channel
+
+:ft_ircd 403 two #channel :No such channel
+

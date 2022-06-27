@@ -1,0 +1,5 @@
+test
+|invite
+
+:ft_ircd 461 test INVITE :Not enough parameters
+

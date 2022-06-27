@@ -13,6 +13,7 @@ void
 {
     std::fstream result;
 
+    result.flush();
     _length          = read(_fd, _buffer, BUFFER_MAX);
     _buffer[_length] = '\0';
     _result.append(_buffer);
@@ -20,6 +21,7 @@ void
                 std::fstream::out | std::fstream::app);
     if (result.is_open())
         result << _nick << "\n" << _result << "\n";
+    result.flush();
     result.close();
 }
 

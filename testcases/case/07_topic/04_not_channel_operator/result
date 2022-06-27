@@ -1,0 +1,19 @@
+one
+|join #channel|mode #channel +t
+
+:one!user@localhost JOIN #channel
+:ft_ircd 331 one #channel :No topic is set
+:ft_ircd 353 one = #channel :@one 
+:ft_ircd 366 one #channel :End of NAMES list
+:one!user@localhost MODE #channel +t
+:two!user@localhost JOIN #channel
+
+two
+|join #channel|topic #channel :hi~
+
+:two!user@localhost JOIN #channel
+:ft_ircd 331 two #channel :No topic is set
+:ft_ircd 353 two = #channel :@one two 
+:ft_ircd 366 two #channel :End of NAMES list
+:ft_ircd 482 two #channel :You're not channel operator
+

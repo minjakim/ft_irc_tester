@@ -4,13 +4,13 @@ void
     Receiver::m_diff(const std::string& path)
 {
     std::string result("echo ");
-    result.append("\n\n" + path + "\n\n");
-    result.append(" >> ../diff");
+    result.append(path);
+    result.append(" >> diff");
     system(result.c_str());
     std::string diff("diff ");
     diff.append(REF + path + "result ");
     diff.append(CASE + path + "result ");
-    diff.append(">> ../diff");
+    diff.append(">> diff");
     system(diff.c_str());
 }
 
@@ -31,17 +31,15 @@ void
     t_vstr lines = split(Socket::_buffer, '\n');
     t_vstr nicks = split(lines[1], ',');
     Worker worker[nicks.size()];
-    int    size = lines.size();
+    int    size = nicks.size();
 
     m_trunc(lines[0]);
     if (nicks[0].front() == '!')
     {
         mode = true;
         nicks[0].erase(0, 1);
-        size -= 3;
     }
-    else
-        size -= 2;
+
     for (int i = 0; i < size; ++i)
         worker[i] = Worker(lines[0], nicks[i], lines[i + 2], _port);
     for (int i = 0; i < size; ++i)
@@ -56,6 +54,7 @@ void
         worker[i].flush(true);
     for (int i = 0; i < size; ++i)
         worker[i].quit();
+    m_diff(lines[0]);
 }
 
 void
@@ -63,12 +62,12 @@ void
 {
     if (0 < Socket::receive(_events[Event::_index]))
         m_received();
-    else if (Socket::_result == 0)
-    {
-        Socket::close(_fd);
-        Event::remove(_fd);
-        Event::toggle(Socket::_socket.fd, EV_ENABLE);
-    }
+    // else if (Socket::_result == 0)
+    //{
+    //     Socket::close(_fd);
+    //     Event::remove(_fd);
+    //  Event::toggle(Socket::_socket.fd, EV_ENABLE);
+    //}
 }
 
 void
@@ -77,7 +76,7 @@ void
     if (Socket::accept() == -1)
         return;
     Event::add(_fd);
-    Event::toggle(Socket::_socket.fd, EV_DISABLE);
+    // Event::toggle(Socket::_socket.fd, EV_DISABLE);
 }
 
 void

@@ -1,4 +1,4 @@
 02_nick/06_already_in_use/
 one,two
-nick one
+nick one|privmsg one hi
 nick one

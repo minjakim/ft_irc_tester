@@ -1,0 +1,5 @@
+one
+|privmsg two /help|privmsg bot time|privmsg bot coin
+
+:ft_ircd 401 one two :No such nick
+

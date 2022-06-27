@@ -1,3 +1,4 @@
 07_topic/05_protected_topic_mode_channel/
 one,two
 join #channel|mode #channel +t|topic #channel :hi~|topic #channel
+privmsg two hi

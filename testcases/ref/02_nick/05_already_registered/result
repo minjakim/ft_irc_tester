@@ -1,0 +1,5 @@
+test
+|nick KING
+
+:test!user@localhost NICK KING
+

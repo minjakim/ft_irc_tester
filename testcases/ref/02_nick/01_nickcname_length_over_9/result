@@ -1,0 +1,5 @@
+test
+|nick abcde12345
+
+:ft_ircd 432 * abcde12345 :Erroneus nickname
+

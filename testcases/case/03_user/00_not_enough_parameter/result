@@ -1,0 +1,8 @@
+test
+|user|user user|user user host|user user host server
+
+:ft_ircd 461 * USER :Not enough parameters
+:ft_ircd 461 * USER :Not enough parameters
+:ft_ircd 461 * USER :Not enough parameters
+:ft_ircd 461 * USER :Not enough parameters
+
