@@ -1,0 +1,5 @@
+one
+|privmsg bot /help
+
+:bot!*@localhost NOTICE one :command list : [/help, /time, /coin]
+

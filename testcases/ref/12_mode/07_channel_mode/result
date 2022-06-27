@@ -1,0 +1,32 @@
+test
+|join #channel|mode #channel +i|mode #channel|mode #channel -i|mode #channel|mode #channel +n|mode #channel|mode #channel -n|mode #channel|mode #channel +t|mode #channel|mode #channel -t|mode #channel|mode #channel +i-i+i-i|mode #channel|mode #channel +int|mode #channel|mode #channel -int|mode #channel|mode #channel +it-nt|mode #channel|mode #channel it|mode #channel|mode #channel --------i++++++++int--------i|mode #channel
+
+:test!user@localhost JOIN #channel
+:ft_ircd 331 test #channel :No topic is set
+:ft_ircd 353 test = #channel :@test 
+:ft_ircd 366 test #channel :End of NAMES list
+:test!user@localhost MODE #channel +i
+:ft_ircd 324 test #channel +i
+:test!user@localhost MODE #channel -i
+:ft_ircd 324 test #channel +
+:test!user@localhost MODE #channel +n
+:ft_ircd 324 test #channel +n
+:test!user@localhost MODE #channel -n
+:ft_ircd 324 test #channel +
+:test!user@localhost MODE #channel +t
+:ft_ircd 324 test #channel +t
+:test!user@localhost MODE #channel -t
+:ft_ircd 324 test #channel +
+:test!user@localhost MODE #channel +i-i+i-i
+:ft_ircd 324 test #channel +
+:test!user@localhost MODE #channel +int
+:ft_ircd 324 test #channel +itn
+:test!user@localhost MODE #channel -int
+:ft_ircd 324 test #channel +
+:test!user@localhost MODE #channel +it-t
+:ft_ircd 324 test #channel +i
+:ft_ircd 324 test #channel +i
+:ft_ircd 324 test #channel +i
+:test!user@localhost MODE #channel -i+int-i
+:ft_ircd 324 test #channel +tn
+

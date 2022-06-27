@@ -1,0 +1,9 @@
+one
+|join #channel|kick #channel two
+
+:one!user@localhost JOIN #channel
+:ft_ircd 331 one #channel :No topic is set
+:ft_ircd 353 one = #channel :@one 
+:ft_ircd 366 one #channel :End of NAMES list
+:ft_ircd 401 one two :No such nick
+

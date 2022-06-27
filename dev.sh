@@ -4,8 +4,8 @@ trap "pkill -P $$; exit" SIGINT
 trap "pkill -P $$; exit" SIGTERM
 trap "pkill -P $$; exit" SIGQUIT
 
-#make re -C ../
-#../ircserv 6667 6667 > /dev/null 2> /dev/null&
+make re -C ../
+../ircserv 6667 6667 > /dev/null 2> /dev/null&
 
 make re -C ./testserver/
 ./testserver/receiver 6666 6667 > /dev/null&
@@ -26,6 +26,7 @@ do
 	do
 		echo $list/$case
 		cat $DIR/$list/$case/case | nc localhost 6666
+		sleep 1
 	done
 done
 

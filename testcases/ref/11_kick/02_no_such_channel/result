@@ -1,0 +1,5 @@
+one
+|kick #channel one
+
+:ft_ircd 403 one #channel :No such channel
+

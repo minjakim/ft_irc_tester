@@ -46,6 +46,7 @@ void
         worker[i].run();
     if (mode)
     {
+        sleep(1);
         worker[0]._job = split(lines[lines.size() - 1], '|');
         worker[0].run();
         sleep(1);
