@@ -1,0 +1,4 @@
+06_part/04_part/
+one,two
+join #channel
+join #channel|part #channel

@@ -1,0 +1,6 @@
+11_kick/09_many_to_many/
+one,two,three,four
+join #a,#b,#c
+join #a,#b,#c
+join #a,#b,#c
+join #a,#b,#c|kick #a,#b,#c two,three,four|list

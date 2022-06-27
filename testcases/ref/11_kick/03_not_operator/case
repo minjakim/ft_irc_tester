@@ -1,0 +1,4 @@
+11_kick/03_not_operator/
+one,two|join #channel
+1 join #channel
+1 kick #channel one

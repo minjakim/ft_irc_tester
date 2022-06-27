@@ -1,0 +1,4 @@
+02_nick/06_already_in_use/
+one,two
+NICK one
+NICK one

@@ -1,0 +1,29 @@
+one
+|join #ch|mode #ch +i|invite three #ch
+
+:one!user@localhost JOIN #ch
+:ft_ircd 331 one #ch :No topic is set
+:ft_ircd 353 one = #ch :@one 
+:ft_ircd 366 one #ch :End of NAMES list
+:one!user@localhost MODE #ch +i
+:ft_ircd 341 one three #ch
+:three!user@localhost JOIN #ch
+:three!user@localhost PART #ch :three
+
+two
+|join #ch|invite three #ch
+
+:ft_ircd 473 two #ch :Cannot join channel (+i)
+:ft_ircd 442 two #ch :You're not on that channel
+
+three
+|join #ch|join #ch|part #ch|join #ch
+
+:one!user@localhost INVITE three #ch
+:three!user@localhost JOIN #ch
+:ft_ircd 331 three #ch :No topic is set
+:ft_ircd 353 three = #ch :@one three 
+:ft_ircd 366 three #ch :End of NAMES list
+:three!user@localhost PART #ch :three
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+

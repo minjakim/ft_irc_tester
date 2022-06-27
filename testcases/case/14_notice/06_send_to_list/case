@@ -1,0 +1,4 @@
+14_notice/06_send_to_list/
+one
+
+in #a,#b,#c|notice #a,#b,#c,one :message bomb

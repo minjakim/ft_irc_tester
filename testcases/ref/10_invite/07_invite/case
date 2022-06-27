@@ -1,0 +1,7 @@
+10_invite/07_invite/
+one,two,three|join #channel
+1 join #channel
+1 invite three #channel
+2 join #channel
+2 part #channel
+2 join #channel

@@ -1,0 +1,6 @@
+11_kick/01_not_enough_parameter/
+!one,two,three
+join #a,#b,#c
+join #a,#b,#c
+join #a,#b,#c
+kick #a|kick two|kick #a,#b one,two,three|kick #a,#b,#c two,three

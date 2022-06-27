@@ -1,0 +1,4 @@
+04_quit/02_after_join_channel/
+one,two
+join #channel
+join #channel|quit

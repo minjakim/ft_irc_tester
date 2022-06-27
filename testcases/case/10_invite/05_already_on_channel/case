@@ -1,0 +1,4 @@
+10_invite/05_already_on_channel/
+one,two
+join #channel
+join #channel|invite one #channel

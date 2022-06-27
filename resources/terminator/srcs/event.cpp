@@ -54,7 +54,7 @@ int
 }
 
 void
-    Event::initialize()
+    Event::initialize(int socket_fd)
 {
     _kqueue = kqueue();
     if (_kqueue == -1)
@@ -63,6 +63,7 @@ void
                   << std::endl;
         exit(1);
     }
+    m_set(socket_fd, EVFILT_READ, EV_ADD, 0, 0, NULL);
 }
 
 Event::Event()

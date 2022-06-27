@@ -1,0 +1,5 @@
+10_invite/06_invite_only_mode_channel/
+one,two,three
+join #ch|mode #ch +i|invite three #ch
+join #ch|invite three #ch
+join #ch|join #ch|part #ch|join #ch

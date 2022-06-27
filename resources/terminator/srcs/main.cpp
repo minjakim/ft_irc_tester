@@ -1,13 +1,40 @@
 #include "../includes/client.hpp"
-#include "../includes/event.hpp"
+#include "../includes/tester.hpp"
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <ratio>
 #include <sstream>
 #include <streambuf>
 #include <sys/stat.h>
 #include <unistd.h>
 #include <vector>
+
+// Tester  _tester;
+// Client* _client;
+
+// void
+
+// void
+//     Tester::run(int port)
+//{
+//     int count;
+
+//    Socket::initialize(port);
+//    Event::initialize(_socket.fd);
+
+//    count = Event::kevent();
+//    _client = (Client*)_events[Event::_index].udata;
+
+//    // 127.0.0.1:6666;
+//}
+
+// int
+//     main(int argc, char** argv)
+//{
+//     //포트 인자 필요
+//     _tester.run(6666);
+// }
 
 std::vector<Client*> clients;
 std::string          test_case_name;
@@ -221,7 +248,7 @@ int
     std::getline(test_case, buffer);
     port = atoi(buffer.c_str());
     // kqueue 생성
-    event.initialize();
+    // event.initialize();
     return 0;
 }
 

@@ -1,0 +1,4 @@
+13_privmsg/03_no_message_channel_mode/
+one,two
+join #channel|mode #channel +n
+privmsg #channel :hello world|join #channel|privmsg #channel :god of thunder

@@ -1,0 +1,9 @@
+16_bot/01_valid/
+one,two,three|join #a
+1 join #b|privmsg bot :/help|privmsg bot :/time|privmsg bot :/coin
+1 privmsg bot :/help
+1 privmsg bot :/time
+1 privmsg bot :/coin
+2 privmsg bot :/help
+2 privmsg bot :/time
+2 privmsg bot :/coin

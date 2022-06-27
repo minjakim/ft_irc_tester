@@ -28,7 +28,7 @@ class Event
     int           _index;
     void          toggle(int EVFILT_TYPE);
     void          toggle(Client&, int EVFILT_TYPE);
-    void          initialize();
+    void          initialize(int);
     void          remove(int fd);
     void          add(Client*);
     int           kevent();

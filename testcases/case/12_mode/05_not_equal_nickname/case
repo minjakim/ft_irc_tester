@@ -1,0 +1,4 @@
+12_mode/05_not_equal_nickname/
+one,two
+mode two|mode two +i|mode two +nt|mode two -t
+mode one +it

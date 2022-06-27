@@ -1,0 +1,35 @@
+one
+:one!user@localhost JOIN #ch
+:ft_ircd 331 one #ch :No topic is set
+:ft_ircd 353 one = #ch :@one 
+:ft_ircd 366 one #ch :End of NAMES list
+:one!user@localhost MODE #ch +i
+:ft_ircd 401 one three :No such nick
+
+two
+:ft_ircd 473 two #ch :Cannot join channel (+i)
+
+three
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+:ft_ircd 442 three #ch :You're not on that channel
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+
+one
+:one!user@localhost JOIN #ch
+:ft_ircd 331 one #ch :No topic is set
+:ft_ircd 353 one = #ch :@one 
+:ft_ircd 366 one #ch :End of NAMES list
+:one!user@localhost MODE #ch +i
+:ft_ircd 401 one three :No such nick
+
+two
+:ft_ircd 473 two #ch :Cannot join channel (+i)
+:ft_ircd 401 two three :No such nick
+
+three
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+:ft_ircd 442 three #ch :You're not on that channel
+:ft_ircd 473 three #ch :Cannot join channel (+i)
+

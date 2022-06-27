@@ -1,0 +1,6 @@
+08_names/02_channel/
+one,two,three,four
+join #a,#b,#c
+join #a,#b
+join #a
+names #a|names #a,#b|names #a,#b,#c

@@ -1,0 +1,3 @@
+06_part/04_part/
+one,two|join #channel
+1 join #channel|part #channel

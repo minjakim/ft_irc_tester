@@ -1,0 +1,3 @@
+10_invite/04_not_on_channel/
+one,two,three
+1 join #channel|invite three #channel

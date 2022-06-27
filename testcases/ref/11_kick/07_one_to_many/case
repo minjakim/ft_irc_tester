@@ -1,0 +1,8 @@
+11_kick/07_one_to_many/
+one,two,three,four,five,six|join #channel
+1 join #channel
+2 join #channel
+3 join #channel
+4 join #channel
+5 join #channel|kick #channel two,three,four,five
+5 names #channel

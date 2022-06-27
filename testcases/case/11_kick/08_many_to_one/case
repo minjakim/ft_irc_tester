@@ -1,0 +1,5 @@
+11_kick/08_many_to_one/
+one,two,three
+join #a,#b,#c,#d,#e,#f,#g
+join #a,#b,#c,#d,#e,#f,#g
+join #a,#b,#c,#d,#e,#f,#g|kick #a,#b,#c,#d,#e,#f,#g two|list

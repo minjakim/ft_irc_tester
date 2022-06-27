@@ -1,0 +1,7 @@
+12_mode/03_not_channel_operator/
+one,two|join #ch1
+1 join #ch1
+1 mode #ch1 +int
+1 mode #ch1 +in
+1 mode #ch1 -n
+1 mode #ch1 -int

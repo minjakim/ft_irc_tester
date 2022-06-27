@@ -1,0 +1,6 @@
+08_names/01_no_parameter/
+one,two,three,four
+join #a,#b,#c
+join #a,#b
+join #a
+names

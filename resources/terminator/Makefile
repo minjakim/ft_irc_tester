@@ -1,6 +1,6 @@
 NAME    	= tester
 CC      	= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+#CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 srcs		= main.cpp\
@@ -15,10 +15,10 @@ all     	: $(NAME)
 
 objs/%.o   	: srcs/%.cpp
 	@mkdir -p $(dir ./objs/$*)
-	$(CC) $(CXXFLAGS) -c $< -o $@
+	$(CC) -c $< -o $@
 
 $(NAME) 	: $(OBJS)
-	$(CC) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(OBJS) -o $(NAME)
 
 clean   	:
 	$(RM) ./objs

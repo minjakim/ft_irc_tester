@@ -1,0 +1,6 @@
+07_topic/05_protected_topic_mode_channel/
+one,two|join #channel
+1 join #channel|mode #channel +t
+1 topic #channel :hi~|topic #channel
+1 topic #channel|topic #channel :hi~|topic #channel
+1 topic #channel

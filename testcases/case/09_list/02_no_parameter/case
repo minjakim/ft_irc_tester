@@ -1,0 +1,5 @@
+09_list/02_no_parameter/
+one,two,three
+join #a,#b,#c,#d
+join #a,#b,#c
+join #a,#b|list
