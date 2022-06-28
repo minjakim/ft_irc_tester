@@ -1,0 +1,6 @@
+framework module CocoaExtensions {
+  umbrella header "CocoaExtensions.h"
+
+  export *
+  module * { export * }
+}

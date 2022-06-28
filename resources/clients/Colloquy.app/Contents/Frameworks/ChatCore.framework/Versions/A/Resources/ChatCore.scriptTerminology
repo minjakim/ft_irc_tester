@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+		<key>MVChatConnection</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>localUser</key>
+				<dict>
+					<key>Description</key>
+					<string>Current local user when connected.</string>
+					<key>Name</key>
+					<string>local user</string>
+				</dict>
+				<key>nickname</key>
+				<dict>
+					<key>Description</key>
+					<string>Current nickname on the server.</string>
+					<key>Name</key>
+					<string>nickname</string>
+				</dict>
+				<key>nicknamePassword</key>
+				<dict>
+					<key>Description</key>
+					<string>The nickname's password.</string>
+					<key>Name</key>
+					<string>nickname password</string>
+				</dict>
+				<key>password</key>
+				<dict>
+					<key>Description</key>
+					<string>Password to connect to the server.</string>
+					<key>Name</key>
+					<string>password</string>
+				</dict>
+				<key>proxy</key>
+				<dict>
+					<key>Description</key>
+					<string>What system proxy server to use.</string>
+					<key>Name</key>
+					<string>proxy</string>
+				</dict>
+				<key>scriptTypedAwayMessage</key>
+				<dict>
+					<key>Description</key>
+					<string>Away message for other users to see that your not there.</string>
+					<key>Name</key>
+					<string>away message</string>
+				</dict>
+				<key>scriptTypedEncoding</key>
+				<dict>
+					<key>Description</key>
+					<string>The default connection encoding that is used when sending raw messages or chat messages without a specific encoding.</string>
+					<key>Name</key>
+					<string>encoding</string>
+				</dict>
+				<key>server</key>
+				<dict>
+					<key>Description</key>
+					<string>Server IP address or domain name.</string>
+					<key>Name</key>
+					<string>server address</string>
+				</dict>
+				<key>serverPort</key>
+				<dict>
+					<key>Description</key>
+					<string>Port to connect on.</string>
+					<key>Name</key>
+					<string>port number</string>
+				</dict>
+				<key>status</key>
+				<dict>
+					<key>Description</key>
+					<string>Current connection status.</string>
+					<key>Name</key>
+					<string>status</string>
+				</dict>
+				<key>scriptUniqueIdentifier</key>
+				<dict>
+					<key>Description</key>
+					<string>The unique identifier of the connection.</string>
+					<key>Name</key>
+					<string>id</string>
+				</dict>
+				<key>urlString</key>
+				<dict>
+					<key>Description</key>
+					<string>Chat URL containing nickname, server and port.</string>
+					<key>Name</key>
+					<string>URL</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Manages all chat communication with a chat server.</string>
+			<key>Name</key>
+			<string>connection</string>
+			<key>PluralName</key>
+			<string>connections</string>
+		</dict>
+		<key>MVChatRoom</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>attributes</key>
+				<dict>
+					<key>Description</key>
+					<string>Room attributes containing various items.</string>
+					<key>Name</key>
+					<string>attributes</string>
+				</dict>
+				<key>bannedUsersArray</key>
+				<dict>
+					<key>Description</key>
+					<string>Current chat room members.</string>
+					<key>Name</key>
+					<string>banned users</string>
+				</dict>
+				<key>dateJoined</key>
+				<dict>
+					<key>Description</key>
+					<string>Date we joined the room. Missing value if we haven't joined yet.</string>
+					<key>Name</key>
+					<string>date joined</string>
+				</dict>
+				<key>dateParted</key>
+				<dict>
+					<key>Description</key>
+					<string>Date we parted the room. Missing value if we haven't parted yet.</string>
+					<key>Name</key>
+					<string>date parted</string>
+				</dict>
+				<key>displayName</key>
+				<dict>
+					<key>Description</key>
+					<string>Full room name without any prefixes.</string>
+					<key>Name</key>
+					<string>display name</string>
+				</dict>
+				<key>isJoined</key>
+				<dict>
+					<key>Description</key>
+					<string>Are we currently in the room?</string>
+					<key>Name</key>
+					<string>joined</string>
+				</dict>
+				<key>name</key>
+				<dict>
+					<key>Description</key>
+					<string>Full room name.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+				<key>scriptTypedEncoding</key>
+				<dict>
+					<key>Description</key>
+					<string>Default encoding for outgoing messages.</string>
+					<key>Name</key>
+					<string>encoding</string>
+				</dict>
+				<key>scriptUniqueIdentifier</key>
+				<dict>
+					<key>Description</key>
+					<string>The unique identifier of the room.</string>
+					<key>Name</key>
+					<string>id</string>
+				</dict>
+				<key>urlString</key>
+				<dict>
+					<key>Description</key>
+					<string>The full room URL containing the server and room name.</string>
+					<key>Name</key>
+					<string>URL</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Represents a join chat room.</string>
+			<key>Name</key>
+			<string>chat room</string>
+			<key>PluralName</key>
+			<string>chat rooms</string>
+		</dict>
+		<key>MVChatUser</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>address</key>
+				<dict>
+					<key>Description</key>
+					<string>The address the user connected to the server from. Sometimes this is a fake (masked) address.</string>
+					<key>Name</key>
+					<string>address</string>
+				</dict>
+				<key>attributes</key>
+				<dict>
+					<key>Description</key>
+					<string>User attributes containing various items.</string>
+					<key>Name</key>
+					<string>attributes</string>
+				</dict>
+				<key>dateConnected</key>
+				<dict>
+					<key>Description</key>
+					<string>The date the user connected to the server.</string>
+					<key>Name</key>
+					<string>date connected</string>
+				</dict>
+				<key>dateDisconnected</key>
+				<dict>
+					<key>Description</key>
+					<string>The date the user disconnected from the server. This will not be available for all users.</string>
+					<key>Name</key>
+					<string>date disconnected</string>
+				</dict>
+				<key>dateUpdated</key>
+				<dict>
+					<key>Description</key>
+					<string>The last time the refresh information command finished.</string>
+					<key>Name</key>
+					<string>date updated</string>
+				</dict>
+				<key>displayName</key>
+				<dict>
+					<key>Description</key>
+					<string>Display name, almost always the nickname.</string>
+					<key>Name</key>
+					<string>display name</string>
+				</dict>
+				<key>idleTime</key>
+				<dict>
+					<key>Description</key>
+					<string>The number of seconds the user has been idle on the server.</string>
+					<key>Name</key>
+					<string>idle time</string>
+				</dict>
+				<key>nickname</key>
+				<dict>
+					<key>Description</key>
+					<string>The current nickname.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+				<key>realName</key>
+				<dict>
+					<key>Description</key>
+					<string>The real name supplied by the user, not always a person's real name.</string>
+					<key>Name</key>
+					<string>real name</string>
+				</dict>
+				<key>scriptTypedAwayMessage</key>
+				<dict>
+					<key>Description</key>
+					<string>The user's away message.</string>
+					<key>Name</key>
+					<string>away message</string>
+				</dict>
+				<key>scriptUniqueIdentifier</key>
+				<dict>
+					<key>Description</key>
+					<string>The unique identifier of the user on the server.</string>
+					<key>Name</key>
+					<string>id</string>
+				</dict>
+				<key>serverAddress</key>
+				<dict>
+					<key>Description</key>
+					<string>The server address the user is connected to. This might be a different address than you are connected to, since servers are sometimes clustered.</string>
+					<key>Name</key>
+					<string>server address</string>
+				</dict>
+				<key>status</key>
+				<dict>
+					<key>Description</key>
+					<string>The current status of the user.</string>
+					<key>Name</key>
+					<string>status</string>
+				</dict>
+				<key>username</key>
+				<dict>
+					<key>Description</key>
+					<string>The user name supplied by the user.</string>
+					<key>Name</key>
+					<string>user name</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Represents a user on a chat server. Many properties of this class require the refresh information command to be called first on the instance.</string>
+			<key>Name</key>
+			<string>chat user</string>
+			<key>PluralName</key>
+			<string>chat users</string>
+		</dict>
+		<key>MVFileTransfer</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>finalSize</key>
+				<dict>
+					<key>Description</key>
+					<string>The final expected size (in bytes) of the file.</string>
+					<key>Name</key>
+					<string>final size</string>
+				</dict>
+				<key>hostString</key>
+				<dict>
+					<key>Description</key>
+					<string>The address of the other user engaged in the transfer.</string>
+					<key>Name</key>
+					<string>host address</string>
+				</dict>
+				<key>isPassive</key>
+				<dict>
+					<key>Description</key>
+					<string>Is the transfer using passive mode?</string>
+					<key>Name</key>
+					<string>passive</string>
+				</dict>
+				<key>port</key>
+				<dict>
+					<key>Description</key>
+					<string>The port this the transfer is using.</string>
+					<key>Name</key>
+					<string>port</string>
+				</dict>
+				<key>scriptFilePath</key>
+				<dict>
+					<key>Description</key>
+					<string>The file this transfer is associated with.</string>
+					<key>Name</key>
+					<string>file</string>
+				</dict>
+				<key>scriptType</key>
+				<dict>
+					<key>Description</key>
+					<string>The type of this transfer.</string>
+					<key>Name</key>
+					<string>type</string>
+				</dict>
+				<key>startDate</key>
+				<dict>
+					<key>Description</key>
+					<string>The date and time this file transfer started.</string>
+					<key>Name</key>
+					<string>start date</string>
+				</dict>
+				<key>startOffset</key>
+				<dict>
+					<key>Description</key>
+					<string>The location (offset) in the file where transfer was resumed.</string>
+					<key>Name</key>
+					<string>start offset</string>
+				</dict>
+				<key>status</key>
+				<dict>
+					<key>Description</key>
+					<string>The current status of the transfer.</string>
+					<key>Name</key>
+					<string>status</string>
+				</dict>
+				<key>transferred</key>
+				<dict>
+					<key>Description</key>
+					<string>The current size (in bytes) this file has transferred.</string>
+					<key>Name</key>
+					<string>transferred size</string>
+				</dict>
+				<key>uniqueIdentifier</key>
+				<dict>
+					<key>Description</key>
+					<string>The unique identifier of the file transfer.</string>
+					<key>Name</key>
+					<string>id</string>
+				</dict>
+				<key>user</key>
+				<dict>
+					<key>Description</key>
+					<string>The chat user this transfer is with.</string>
+					<key>Name</key>
+					<string>chat user</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Represents a file transfer with another chat user.</string>
+			<key>Name</key>
+			<string>file transfer</string>
+			<key>PluralName</key>
+			<string>file transfers</string>
+		</dict>
+	</dict>
+	<key>Commands</key>
+	<dict>
+		<key>Connect</key>
+		<dict>
+			<key>Description</key>
+			<string>Connect to the server.</string>
+			<key>Name</key>
+			<string>connect</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>The connection to connect.</string>
+			</dict>
+		</dict>
+		<key>Disconnect</key>
+		<dict>
+			<key>Description</key>
+			<string>Disconnect from the server.</string>
+			<key>Name</key>
+			<string>disconnect</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>The connection to disconnect.</string>
+			</dict>
+		</dict>
+		<key>JoinChatRoom</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>connection</key>
+				<dict>
+					<key>Description</key>
+					<string>The connection to join on. Optional if the nearest enclosing tell block responds to this command.</string>
+					<key>Name</key>
+					<string>on</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Join a chat room.</string>
+			<key>Name</key>
+			<string>join chat room</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>Chat room(s) to join.</string>
+			</dict>
+		</dict>
+		<key>RefreshInformation</key>
+		<dict>
+			<key>Description</key>
+			<string>Refresh various properties of a chat user.</string>
+			<key>Name</key>
+			<string>refresh information</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>The chat user.</string>
+			</dict>
+		</dict>
+		<key>ReloadPlugins</key>
+		<dict>
+			<key>Description</key>
+			<string>Reloads all plugins that are in the search paths. Plugins that have been deleted or moved will be unloaded.</string>
+			<key>Name</key>
+			<string>reload plugins</string>
+		</dict>
+		<key>SendMessage</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>action</key>
+				<dict>
+					<key>Description</key>
+					<string>Send as an action?</string>
+					<key>Name</key>
+					<string>action tense</string>
+				</dict>
+				<key>echo</key>
+				<dict>
+					<key>Description</key>
+					<string>Show the message locally on screen? (Defaults on.)</string>
+					<key>Name</key>
+					<string>local echo</string>
+				</dict>
+				<key>encoding</key>
+				<dict>
+					<key>Description</key>
+					<string>The encoding to send the message as (will default to the room or connection encoding if omitted).</string>
+					<key>Name</key>
+					<string>encoded as</string>
+				</dict>
+				<key>target</key>
+				<dict>
+					<key>Description</key>
+					<string>The chat user or chat room to send to. Optional if the nearest enclosing tell block responds to this command.</string>
+					<key>Name</key>
+					<string>to</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Send a message to a room or user.</string>
+			<key>Name</key>
+			<string>send message</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>The message to send. (Plain text with HTML formatting. Must entity encode HTML special characters.)</string>
+			</dict>
+		</dict>
+		<key>SendRawCommand</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>connection</key>
+				<dict>
+					<key>Description</key>
+					<string>The connection to send to. Optional if the nearest enclosing tell block responds to this command.</string>
+					<key>Name</key>
+					<string>to</string>
+				</dict>
+				<key>priority</key>
+				<dict>
+					<key>Description</key>
+					<string>Send this command now? (This will bypass any queued commands.)</string>
+					<key>Name</key>
+					<string>priority</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Send raw server command (message) to server.</string>
+			<key>Name</key>
+			<string>send raw command</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>The raw server command (message) to send. (This is protocol specific.)</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Classes and commands for Chat Core scripting. Chat Core is the the lowest level of Colloquy.</string>
+	<key>Enumerations</key>
+	<dict>
+		<key>ConnectionStatus</key>
+		<dict>
+			<key>Connected</key>
+			<dict>
+				<key>Description</key>
+				<string>Connected status.</string>
+				<key>Name</key>
+				<string>connected</string>
+			</dict>
+			<key>Connecting</key>
+			<dict>
+				<key>Description</key>
+				<string>Connecting status.</string>
+				<key>Name</key>
+				<string>connecting</string>
+			</dict>
+			<key>Disconnected</key>
+			<dict>
+				<key>Description</key>
+				<string>Disconnected status.</string>
+				<key>Name</key>
+				<string>disconnected</string>
+			</dict>
+			<key>Suspended</key>
+			<dict>
+				<key>Description</key>
+				<string>Suspended status.</string>
+				<key>Name</key>
+				<string>suspended</string>
+			</dict>
+		</dict>
+		<key>Encoding</key>
+		<dict>
+			<key>ASCII</key>
+			<dict>
+				<key>Name</key>
+				<string>ASCII</string>
+			</dict>
+			<key>Big5</key>
+			<dict>
+				<key>Name</key>
+				<string>Big 5</string>
+			</dict>
+			<key>Big5HKSCS</key>
+			<dict>
+				<key>Name</key>
+				<string>Big 5 HKSCS</string>
+			</dict>
+			<key>GB18030</key>
+			<dict>
+				<key>Name</key>
+				<string>GB 18030</string>
+			</dict>
+			<key>GBK</key>
+			<dict>
+				<key>Name</key>
+				<string>GBK</string>
+			</dict>
+			<key>ISOLatin1</key>
+			<dict>
+				<key>Name</key>
+				<string>ISO Latin 1</string>
+			</dict>
+			<key>ISOLatin2</key>
+			<dict>
+				<key>Name</key>
+				<string>ISO Latin 2</string>
+			</dict>
+			<key>ISOLatin3</key>
+			<dict>
+				<key>Name</key>
+				<string>ISO Latin 3</string>
+			</dict>
+			<key>ISOLatin4</key>
+			<dict>
+				<key>Name</key>
+				<string>ISO Latin 4</string>
+			</dict>
+			<key>ISOLatin5</key>
+			<dict>
+				<key>Name</key>
+				<string>ISO Latin 5</string>
+			</dict>
+			<key>ISOLatin9</key>
+			<dict>
+				<key>Name</key>
+				<string>ISO Latin 9</string>
+			</dict>
+			<key>JapaneseEUC</key>
+			<dict>
+				<key>Name</key>
+				<string>Japanese EUC</string>
+			</dict>
+			<key>KOI8R</key>
+			<dict>
+				<key>Name</key>
+				<string>KOI8R</string>
+			</dict>
+			<key>KoreanEUC</key>
+			<dict>
+				<key>Name</key>
+				<string>Korean EUC</string>
+			</dict>
+			<key>MacOSCyrllic</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS Cyrllic</string>
+			</dict>
+			<key>MacOSEuropean</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS European</string>
+			</dict>
+			<key>MacOSJapanese</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS Japanese</string>
+			</dict>
+			<key>MacOSKorean</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS Korean</string>
+			</dict>
+			<key>MacOSRoman</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS Roman</string>
+			</dict>
+			<key>MacOSSimpChinese</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS Simp. Chinese</string>
+			</dict>
+			<key>MacOSTradChinese</key>
+			<dict>
+				<key>Name</key>
+				<string>Mac OS Trad. Chinese</string>
+			</dict>
+			<key>NonlossyASCII</key>
+			<dict>
+				<key>Name</key>
+				<string>Nonlossy ASCII</string>
+			</dict>
+			<key>ShiftJIS</key>
+			<dict>
+				<key>Name</key>
+				<string>Shift JIS</string>
+			</dict>
+			<key>SimpChineseEUC</key>
+			<dict>
+				<key>Name</key>
+				<string>Simp. Chinese EUC</string>
+			</dict>
+			<key>TradChineseEUC</key>
+			<dict>
+				<key>Name</key>
+				<string>Trad. Chinese EUC</string>
+			</dict>
+			<key>UTF8</key>
+			<dict>
+				<key>Name</key>
+				<string>UTF8</string>
+			</dict>
+			<key>WindowsCyrllic</key>
+			<dict>
+				<key>Name</key>
+				<string>Windows Cyrllic</string>
+			</dict>
+			<key>WindowsKorean</key>
+			<dict>
+				<key>Name</key>
+				<string>Windows Korean</string>
+			</dict>
+			<key>WindowsLatin1</key>
+			<dict>
+				<key>Name</key>
+				<string>Windows Latin 1</string>
+			</dict>
+			<key>WindowsLatin2</key>
+			<dict>
+				<key>Name</key>
+				<string>Windows Latin 2</string>
+			</dict>
+			<key>WindowsSimpChinese</key>
+			<dict>
+				<key>Name</key>
+				<string>Windows Simp. Chinese</string>
+			</dict>
+			<key>WindowsTradChinese</key>
+			<dict>
+				<key>Name</key>
+				<string>Windows Trad. Chinese</string>
+			</dict>
+		</dict>
+		<key>FileTransferStatus</key>
+		<dict>
+			<key>Done</key>
+			<dict>
+				<key>Name</key>
+				<string>done</string>
+			</dict>
+			<key>Error</key>
+			<dict>
+				<key>Name</key>
+				<string>error</string>
+			</dict>
+			<key>InProgress</key>
+			<dict>
+				<key>Name</key>
+				<string>in progress</string>
+			</dict>
+			<key>Stopped</key>
+			<dict>
+				<key>Name</key>
+				<string>stopped</string>
+			</dict>
+			<key>Waiting</key>
+			<dict>
+				<key>Name</key>
+				<string>waiting</string>
+			</dict>
+		</dict>
+		<key>FileTransferType</key>
+		<dict>
+			<key>Download</key>
+			<dict>
+				<key>Name</key>
+				<string>download</string>
+			</dict>
+			<key>Upload</key>
+			<dict>
+				<key>Name</key>
+				<string>upload</string>
+			</dict>
+		</dict>
+		<key>Proxy</key>
+		<dict>
+			<key>None</key>
+			<dict>
+				<key>Description</key>
+				<string>No proxy.</string>
+				<key>Name</key>
+				<string>none</string>
+			</dict>
+			<key>SOCKSFirewall</key>
+			<dict>
+				<key>Description</key>
+				<string>SOCKS firewall proxy.</string>
+				<key>Name</key>
+				<string>SOCKS firewall</string>
+			</dict>
+			<key>SecureHTTP</key>
+			<dict>
+				<key>Description</key>
+				<string>Secure HTTP proxy.</string>
+				<key>Name</key>
+				<string>secure HTTP</string>
+			</dict>
+		</dict>
+		<key>SubcodeType</key>
+		<dict>
+			<key>Reply</key>
+			<dict>
+				<key>Description</key>
+				<string>A subcode command reply.</string>
+				<key>Name</key>
+				<string>reply</string>
+			</dict>
+			<key>Request</key>
+			<dict>
+				<key>Description</key>
+				<string>A subcode command request.</string>
+				<key>Name</key>
+				<string>request</string>
+			</dict>
+		</dict>
+		<key>UserStatus</key>
+		<dict>
+			<key>Available</key>
+			<dict>
+				<key>Description</key>
+				<string>Available status.</string>
+				<key>Name</key>
+				<string>available</string>
+			</dict>
+			<key>Away</key>
+			<dict>
+				<key>Description</key>
+				<string>Away status.</string>
+				<key>Name</key>
+				<string>away</string>
+			</dict>
+			<key>Detached</key>
+			<dict>
+				<key>Description</key>
+				<string>Detached status.</string>
+				<key>Name</key>
+				<string>detached</string>
+			</dict>
+			<key>Offline</key>
+			<dict>
+				<key>Description</key>
+				<string>Offline status.</string>
+				<key>Name</key>
+				<string>offline</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Name</key>
+	<string>Chat Core Suite</string>
+</dict>
+</plist>

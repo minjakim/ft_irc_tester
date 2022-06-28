@@ -1,0 +1,94 @@
+body {
+	margin: 4px 0 5px 0;
+	color: black;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom right;
+	background-image: url("Backgrounds/Colloquy.png");
+}
+
+.event {
+	color: #aaa;
+	text-align: center;
+	padding: 0 5px 2px 5px;
+	word-wrap: break-word;
+	-khtml-line-break: after-white-space;
+	-khtml-nbsp-mode: space;
+}
+
+.error:before {
+	content: "(";
+}
+
+.error:after {
+	content: ")";
+}
+
+.envelope {
+	padding: 1px 5px 1px 5px;
+	margin-bottom: 3px;
+}
+
+.envelope.highlight {
+	background-color: #efefec;
+	background-color: rgba( 0, 0, 0, 0.1 );
+}
+
+.message {
+	word-wrap: break-word;
+	-khtml-line-break: after-white-space;
+	-khtml-nbsp-mode: space;
+}
+
+.member {
+	font-weight: bold;
+	color: #f90;
+	text-decoration: none !important;
+}
+
+.member:hover {
+	text-decoration: underline !important;
+}
+
+.member.self {
+	color: #a21;
+}
+
+.message .member {
+	color:inherit;
+	font-weight: inherit;
+}
+
+.envelope > .member {
+	margin-right: 0.5ex;
+	white-space: nowrap;
+}
+
+.envelope > .member:after {
+	content: ":";
+}
+
+.notice > .member:before {
+	content: "\2014";
+	margin-right: 0.3ex;
+}
+
+.action > .member:before {
+	content: "\2022";
+	margin-right: 0.3ex;
+}
+
+.action > .member:after {
+	content: "";
+}
+
+.timestamp {
+	display: block;
+	margin-top: 0;
+	margin-left: 5px;
+	float: right;
+	font-size: 80%;
+	color: #888;
+	word-wrap: normal;
+}

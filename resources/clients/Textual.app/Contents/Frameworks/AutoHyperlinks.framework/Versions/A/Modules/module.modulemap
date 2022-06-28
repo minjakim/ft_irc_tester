@@ -1,0 +1,6 @@
+framework module AutoHyperlinks {
+  umbrella header "AutoHyperlinks.h"
+
+  export *
+  module * { export * }
+}

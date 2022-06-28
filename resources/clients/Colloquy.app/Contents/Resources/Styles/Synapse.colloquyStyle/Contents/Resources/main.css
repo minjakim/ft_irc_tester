@@ -1,0 +1,139 @@
+body {
+	color: black;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top left;
+	background-color: rgba( 32, 80, 110, 0.870 );
+	margin: 0;
+}
+
+.hidden {
+	position: fixed;
+	top: -900px;
+	left: -900px;
+}
+
+.message {
+	display: block;
+	background-color: rgba( 255, 255, 255, 0.6 );
+	padding: 6px;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	margin-bottom: 0;
+	word-wrap: break-word;
+	-khtml-line-break: after-white-space;
+	-khtml-nbsp-mode: space;
+}
+
+.message.self {
+	background-color: #ddd;
+}
+
+.message.highlight {
+	background-color: rgba( 255, 191, 78, 0.6 );
+}
+
+span.message.searchHighlight {
+	background-color: rgba( 255, 128, 0, 0.6 ) !important;
+}
+
+.submessage {
+	display: block;
+	border-top: 1px dashed rgba( 0, 0, 0, 0.2 );
+	background-color: rgba( 255, 255, 255, 0.6 );
+	padding: 6px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	margin-bottom: 0;
+	word-wrap: break-word;
+	-khtml-line-break: after-white-space;
+	-khtml-nbsp-mode: space;
+}
+
+.submessage.self {
+	background-color: #ddd;
+}
+
+.submessage.highlight {
+	background-color: rgba( 255, 191, 78, 0.6 );
+}
+
+span.submessage.searchHighlight {
+	background-color: rgba( 255, 128, 0, 0.6 ) !important;
+}
+
+.shadow {
+	display: block;
+	background: url( "shadow.png" ) repeat-x;
+	width: auto;
+	height: 15px;
+}
+
+.header {
+	display: block;
+   	position: relative;
+    border-bottom: 1px solid rgba( 0, 0, 0, 0.5 );
+    margin-bottom: 2px;
+}
+
+.header .name {
+	text-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.6 );
+	width: auto;
+	font-weight: bold;
+	text-decoration: none;
+	color: inherit;
+}
+
+.time {
+	float: right;
+	font-size: smaller;
+	margin-left: 10px;
+	color: rgba( 0, 0, 0, 0.5 );
+}
+
+.time[title]:before {
+	content: attr( title );
+}
+
+.event {
+	display: block;
+	text-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.1 );
+	padding: 2px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	text-align: center;
+	width: auto;
+	font-weight: bold;
+	font-size: smaller;
+	color: white;
+	word-wrap: break-word;
+	-khtml-line-break: after-white-space;
+	-khtml-nbsp-mode: space;
+}
+
+.event .reason:before {
+	white-space: pre;
+	content: "\A";
+}
+
+.event a {
+	color: white !important;
+}
+
+a.member {
+	color: inherit !important;
+	text-decoration: none !important;
+	border-bottom: 1px black dotted;
+}
+
+a.member.action {
+	border-bottom: none !important;
+}
+
+.event a.member {
+	border-bottom: 1px white dotted;
+}
+
+#consecutiveInsert {
+	display: none;
+}

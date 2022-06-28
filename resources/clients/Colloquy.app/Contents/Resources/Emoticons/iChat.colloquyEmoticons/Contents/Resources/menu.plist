@@ -1,0 +1,12 @@
+(
+	{name = Smile; image = "smile.png"; insert = ":)";},
+	{name = Frown; image = "frown.png"; insert = ":(";},
+	{name = Wink; image = "wink.png"; insert = ";)";},
+	{name = Laugh; image = "laugh.png"; insert = ":D";},
+	{name = Undecided; image = "slant.png"; insert = ":\\";},
+	{name = Cool; image = "cool.png"; insert = "8)";},
+	{name = Tongue; image = "yuck.png"; insert = ":P";},
+	{name = Gasp; image = "gasp.png"; insert = ":O";},
+	{name = Angry; image = "angry.png"; insert = ":x";},
+	{name = Innocent; image = "innocent.png"; insert = "O:)";}
+)
