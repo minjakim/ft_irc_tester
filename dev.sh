@@ -29,6 +29,8 @@ do
 	done
 done
 
-#./diff.sh
+make fclean -C ./testserver/
 
 pkill -P $$
+
+./diff.sh

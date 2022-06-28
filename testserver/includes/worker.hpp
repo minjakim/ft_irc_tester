@@ -20,5 +20,7 @@ class Worker
     Worker(std::string&, std::string&, std::string&, int);
     void run();
     void flush();
+    void block();
+    void nonblock();
     void quit();
 };

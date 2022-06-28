@@ -1,26 +1,6 @@
 #include "../includes/receiver.hpp"
 
 void
-    Receiver::m_diff(const std::string& path)
-{
-    std::string diff("diff ");
-    diff.append(path + "result ");
-    diff.append(path + "ref ");
-    if (system(diff.c_str()))
-    {
-        std::string result("echo ");
-        result.append(path);
-        result.append(" >> diff");
-        system(result.c_str());
-        std::string diff("diff ");
-        diff.append(path + "result ");
-        diff.append(path + "ref ");
-        diff.append(">> diff");
-        system(diff.c_str());
-    }
-}
-
-void
     Receiver::m_trunc(const std::string& path)
 {
     std::fstream result;
@@ -60,12 +40,13 @@ void
         sleep(1);
     }
     for (int i = 0; i < size; ++i)
+        worker[i].block();
+    for (int i = 0; i < size; ++i)
+        worker[i].nonblock();
+    for (int i = 0; i < size; ++i)
         worker[i].flush();
     for (int i = 0; i < size; ++i)
         worker[i].quit();
-    //#if REF == 0
-    //    m_diff(path);
-    //#endif
 }
 
 void

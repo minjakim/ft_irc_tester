@@ -14,13 +14,30 @@ void
     std::fstream result;
 
     result.flush();
-    _length          = read(_fd, _buffer, BUFFER_MAX);
-    _buffer[_length] = '\0';
-    _result.append(_buffer);
     result.open(_path + RESULT, std::fstream::out | std::fstream::app);
     if (result.is_open())
         result << "\n" << _nick << "\n" << _result;
     result.close();
+}
+
+void
+    Worker::block()
+{
+    _length          = read(_fd, _buffer, BUFFER_MAX);
+    _buffer[_length] = '\0';
+    _result.append(_buffer);
+}
+
+void
+    Worker::nonblock()
+{
+    fcntl(_fd, F_SETFL, O_NONBLOCK);
+    _length = read(_fd, _buffer, BUFFER_MAX);
+    if (0 < _length)
+    {
+        _buffer[_length] = '\0';
+        _result.append(_buffer);
+    }
 }
 
 //기준위치   $_path    ex -> 05_join/07_invite_only_mode_channel

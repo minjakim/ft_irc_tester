@@ -16,9 +16,6 @@ class Receiver : public Socket, public Event
     void m_receive();
     void m_received();
     void m_trunc(const std::string&);
-    void m_disconnected(std::string reason = "");
-    void m_disconnect(std::string reason = "");
-    void m_diff(const std::string& path);
     void m_send();
 
     Client _client;
