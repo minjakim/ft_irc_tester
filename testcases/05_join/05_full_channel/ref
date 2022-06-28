@@ -4,7 +4,7 @@ w00
 
 :w00!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w00 #channel :No topic is set
-:ft_ircd 353 w00 = #channel :@w00
+:ft_ircd 353 w00 = #channel :@w00 
 :ft_ircd 366 w00 #channel :End of NAMES list
 :w01!user@127.0.0.1 JOIN #channel
 :w02!user@127.0.0.1 JOIN #channel
@@ -53,7 +53,7 @@ w01
 
 :w01!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w01 #channel :No topic is set
-:ft_ircd 353 w01 = #channel :@w00 w01
+:ft_ircd 353 w01 = #channel :@w00 w01 
 :ft_ircd 366 w01 #channel :End of NAMES list
 :w02!user@127.0.0.1 JOIN #channel
 :w03!user@127.0.0.1 JOIN #channel
@@ -101,7 +101,7 @@ w02
 
 :w02!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w02 #channel :No topic is set
-:ft_ircd 353 w02 = #channel :@w00 w01 w02
+:ft_ircd 353 w02 = #channel :@w00 w01 w02 
 :ft_ircd 366 w02 #channel :End of NAMES list
 :w03!user@127.0.0.1 JOIN #channel
 :w04!user@127.0.0.1 JOIN #channel
@@ -148,7 +148,7 @@ w03
 
 :w03!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w03 #channel :No topic is set
-:ft_ircd 353 w03 = #channel :@w00 w01 w02 w03
+:ft_ircd 353 w03 = #channel :@w00 w01 w02 w03 
 :ft_ircd 366 w03 #channel :End of NAMES list
 :w04!user@127.0.0.1 JOIN #channel
 :w05!user@127.0.0.1 JOIN #channel
@@ -194,7 +194,7 @@ w04
 
 :w04!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w04 #channel :No topic is set
-:ft_ircd 353 w04 = #channel :@w00 w01 w02 w03 w04
+:ft_ircd 353 w04 = #channel :@w00 w01 w02 w03 w04 
 :ft_ircd 366 w04 #channel :End of NAMES list
 :w05!user@127.0.0.1 JOIN #channel
 :w06!user@127.0.0.1 JOIN #channel
@@ -239,7 +239,7 @@ w05
 
 :w05!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w05 #channel :No topic is set
-:ft_ircd 353 w05 = #channel :@w00 w01 w02 w03 w04 w05
+:ft_ircd 353 w05 = #channel :@w00 w01 w02 w03 w04 w05 
 :ft_ircd 366 w05 #channel :End of NAMES list
 :w06!user@127.0.0.1 JOIN #channel
 :w07!user@127.0.0.1 JOIN #channel
@@ -283,7 +283,7 @@ w06
 
 :w06!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w06 #channel :No topic is set
-:ft_ircd 353 w06 = #channel :@w00 w01 w02 w03 w04 w05 w06
+:ft_ircd 353 w06 = #channel :@w00 w01 w02 w03 w04 w05 w06 
 :ft_ircd 366 w06 #channel :End of NAMES list
 :w07!user@127.0.0.1 JOIN #channel
 :w08!user@127.0.0.1 JOIN #channel
@@ -326,7 +326,7 @@ w07
 
 :w07!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w07 #channel :No topic is set
-:ft_ircd 353 w07 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07
+:ft_ircd 353 w07 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 
 :ft_ircd 366 w07 #channel :End of NAMES list
 :w08!user@127.0.0.1 JOIN #channel
 :w09!user@127.0.0.1 JOIN #channel
@@ -368,7 +368,7 @@ w08
 
 :w08!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w08 #channel :No topic is set
-:ft_ircd 353 w08 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08
+:ft_ircd 353 w08 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 
 :ft_ircd 366 w08 #channel :End of NAMES list
 :w09!user@127.0.0.1 JOIN #channel
 :w10!user@127.0.0.1 JOIN #channel
@@ -409,7 +409,7 @@ w09
 
 :w09!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w09 #channel :No topic is set
-:ft_ircd 353 w09 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09
+:ft_ircd 353 w09 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 
 :ft_ircd 366 w09 #channel :End of NAMES list
 :w10!user@127.0.0.1 JOIN #channel
 :w11!user@127.0.0.1 JOIN #channel
@@ -449,7 +449,7 @@ w10
 
 :w10!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w10 #channel :No topic is set
-:ft_ircd 353 w10 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10
+:ft_ircd 353 w10 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 
 :ft_ircd 366 w10 #channel :End of NAMES list
 :w11!user@127.0.0.1 JOIN #channel
 :w12!user@127.0.0.1 JOIN #channel
@@ -488,7 +488,7 @@ w11
 
 :w11!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w11 #channel :No topic is set
-:ft_ircd 353 w11 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11
+:ft_ircd 353 w11 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 
 :ft_ircd 366 w11 #channel :End of NAMES list
 :w12!user@127.0.0.1 JOIN #channel
 :w13!user@127.0.0.1 JOIN #channel
@@ -526,7 +526,7 @@ w12
 
 :w12!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w12 #channel :No topic is set
-:ft_ircd 353 w12 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12
+:ft_ircd 353 w12 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 
 :ft_ircd 366 w12 #channel :End of NAMES list
 :w13!user@127.0.0.1 JOIN #channel
 :w14!user@127.0.0.1 JOIN #channel
@@ -563,7 +563,7 @@ w13
 
 :w13!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w13 #channel :No topic is set
-:ft_ircd 353 w13 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13
+:ft_ircd 353 w13 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 
 :ft_ircd 366 w13 #channel :End of NAMES list
 :w14!user@127.0.0.1 JOIN #channel
 :w15!user@127.0.0.1 JOIN #channel
@@ -599,7 +599,7 @@ w14
 
 :w14!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w14 #channel :No topic is set
-:ft_ircd 353 w14 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14
+:ft_ircd 353 w14 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 
 :ft_ircd 366 w14 #channel :End of NAMES list
 :w15!user@127.0.0.1 JOIN #channel
 :w16!user@127.0.0.1 JOIN #channel
@@ -634,7 +634,7 @@ w15
 
 :w15!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w15 #channel :No topic is set
-:ft_ircd 353 w15 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15
+:ft_ircd 353 w15 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 
 :ft_ircd 366 w15 #channel :End of NAMES list
 :w16!user@127.0.0.1 JOIN #channel
 :w17!user@127.0.0.1 JOIN #channel
@@ -668,7 +668,7 @@ w16
 
 :w16!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w16 #channel :No topic is set
-:ft_ircd 353 w16 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16
+:ft_ircd 353 w16 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 
 :ft_ircd 366 w16 #channel :End of NAMES list
 :w17!user@127.0.0.1 JOIN #channel
 :w18!user@127.0.0.1 JOIN #channel
@@ -701,7 +701,7 @@ w17
 
 :w17!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w17 #channel :No topic is set
-:ft_ircd 353 w17 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17
+:ft_ircd 353 w17 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 
 :ft_ircd 366 w17 #channel :End of NAMES list
 :w18!user@127.0.0.1 JOIN #channel
 :w19!user@127.0.0.1 JOIN #channel
@@ -733,7 +733,7 @@ w18
 
 :w18!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w18 #channel :No topic is set
-:ft_ircd 353 w18 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18
+:ft_ircd 353 w18 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 
 :ft_ircd 366 w18 #channel :End of NAMES list
 :w19!user@127.0.0.1 JOIN #channel
 :w20!user@127.0.0.1 JOIN #channel
@@ -764,7 +764,7 @@ w19
 
 :w19!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w19 #channel :No topic is set
-:ft_ircd 353 w19 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19
+:ft_ircd 353 w19 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 
 :ft_ircd 366 w19 #channel :End of NAMES list
 :w20!user@127.0.0.1 JOIN #channel
 :w21!user@127.0.0.1 JOIN #channel
@@ -794,7 +794,7 @@ w20
 
 :w20!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w20 #channel :No topic is set
-:ft_ircd 353 w20 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20
+:ft_ircd 353 w20 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 
 :ft_ircd 366 w20 #channel :End of NAMES list
 :w21!user@127.0.0.1 JOIN #channel
 :w22!user@127.0.0.1 JOIN #channel
@@ -823,7 +823,7 @@ w21
 
 :w21!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w21 #channel :No topic is set
-:ft_ircd 353 w21 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21
+:ft_ircd 353 w21 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 
 :ft_ircd 366 w21 #channel :End of NAMES list
 :w22!user@127.0.0.1 JOIN #channel
 :w23!user@127.0.0.1 JOIN #channel
@@ -851,7 +851,7 @@ w22
 
 :w22!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w22 #channel :No topic is set
-:ft_ircd 353 w22 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22
+:ft_ircd 353 w22 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 
 :ft_ircd 366 w22 #channel :End of NAMES list
 :w23!user@127.0.0.1 JOIN #channel
 :w24!user@127.0.0.1 JOIN #channel
@@ -878,7 +878,7 @@ w23
 
 :w23!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w23 #channel :No topic is set
-:ft_ircd 353 w23 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23
+:ft_ircd 353 w23 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 
 :ft_ircd 366 w23 #channel :End of NAMES list
 :w24!user@127.0.0.1 JOIN #channel
 :w25!user@127.0.0.1 JOIN #channel
@@ -904,7 +904,7 @@ w24
 
 :w24!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w24 #channel :No topic is set
-:ft_ircd 353 w24 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24
+:ft_ircd 353 w24 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 
 :ft_ircd 366 w24 #channel :End of NAMES list
 :w25!user@127.0.0.1 JOIN #channel
 :w26!user@127.0.0.1 JOIN #channel
@@ -929,7 +929,7 @@ w25
 
 :w25!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w25 #channel :No topic is set
-:ft_ircd 353 w25 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25
+:ft_ircd 353 w25 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 
 :ft_ircd 366 w25 #channel :End of NAMES list
 :w26!user@127.0.0.1 JOIN #channel
 :w27!user@127.0.0.1 JOIN #channel
@@ -953,7 +953,7 @@ w26
 
 :w26!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w26 #channel :No topic is set
-:ft_ircd 353 w26 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26
+:ft_ircd 353 w26 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 
 :ft_ircd 366 w26 #channel :End of NAMES list
 :w27!user@127.0.0.1 JOIN #channel
 :w28!user@127.0.0.1 JOIN #channel
@@ -976,7 +976,7 @@ w27
 
 :w27!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w27 #channel :No topic is set
-:ft_ircd 353 w27 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27
+:ft_ircd 353 w27 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 
 :ft_ircd 366 w27 #channel :End of NAMES list
 :w28!user@127.0.0.1 JOIN #channel
 :w29!user@127.0.0.1 JOIN #channel
@@ -998,7 +998,7 @@ w28
 
 :w28!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w28 #channel :No topic is set
-:ft_ircd 353 w28 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28
+:ft_ircd 353 w28 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 
 :ft_ircd 366 w28 #channel :End of NAMES list
 :w29!user@127.0.0.1 JOIN #channel
 :w30!user@127.0.0.1 JOIN #channel
@@ -1019,7 +1019,7 @@ w29
 
 :w29!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w29 #channel :No topic is set
-:ft_ircd 353 w29 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29
+:ft_ircd 353 w29 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 
 :ft_ircd 366 w29 #channel :End of NAMES list
 :w30!user@127.0.0.1 JOIN #channel
 :w31!user@127.0.0.1 JOIN #channel
@@ -1039,7 +1039,7 @@ w30
 
 :w30!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w30 #channel :No topic is set
-:ft_ircd 353 w30 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30
+:ft_ircd 353 w30 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 
 :ft_ircd 366 w30 #channel :End of NAMES list
 :w31!user@127.0.0.1 JOIN #channel
 :w32!user@127.0.0.1 JOIN #channel
@@ -1058,7 +1058,7 @@ w31
 
 :w31!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w31 #channel :No topic is set
-:ft_ircd 353 w31 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31
+:ft_ircd 353 w31 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 
 :ft_ircd 366 w31 #channel :End of NAMES list
 :w32!user@127.0.0.1 JOIN #channel
 :w33!user@127.0.0.1 JOIN #channel
@@ -1076,7 +1076,7 @@ w32
 
 :w32!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w32 #channel :No topic is set
-:ft_ircd 353 w32 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32
+:ft_ircd 353 w32 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 
 :ft_ircd 366 w32 #channel :End of NAMES list
 :w33!user@127.0.0.1 JOIN #channel
 :w34!user@127.0.0.1 JOIN #channel
@@ -1093,7 +1093,7 @@ w33
 
 :w33!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w33 #channel :No topic is set
-:ft_ircd 353 w33 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33
+:ft_ircd 353 w33 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 
 :ft_ircd 366 w33 #channel :End of NAMES list
 :w34!user@127.0.0.1 JOIN #channel
 :w35!user@127.0.0.1 JOIN #channel
@@ -1109,7 +1109,7 @@ w34
 
 :w34!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w34 #channel :No topic is set
-:ft_ircd 353 w34 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34
+:ft_ircd 353 w34 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 
 :ft_ircd 366 w34 #channel :End of NAMES list
 :w35!user@127.0.0.1 JOIN #channel
 :w36!user@127.0.0.1 JOIN #channel
@@ -1124,7 +1124,7 @@ w35
 
 :w35!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w35 #channel :No topic is set
-:ft_ircd 353 w35 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35
+:ft_ircd 353 w35 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 
 :ft_ircd 366 w35 #channel :End of NAMES list
 :w36!user@127.0.0.1 JOIN #channel
 :w37!user@127.0.0.1 JOIN #channel
@@ -1138,7 +1138,7 @@ w36
 
 :w36!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w36 #channel :No topic is set
-:ft_ircd 353 w36 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36
+:ft_ircd 353 w36 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 
 :ft_ircd 366 w36 #channel :End of NAMES list
 :w37!user@127.0.0.1 JOIN #channel
 :w38!user@127.0.0.1 JOIN #channel
@@ -1151,7 +1151,7 @@ w37
 
 :w37!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w37 #channel :No topic is set
-:ft_ircd 353 w37 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37
+:ft_ircd 353 w37 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 
 :ft_ircd 366 w37 #channel :End of NAMES list
 :w38!user@127.0.0.1 JOIN #channel
 :w39!user@127.0.0.1 JOIN #channel
@@ -1163,7 +1163,7 @@ w38
 
 :w38!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w38 #channel :No topic is set
-:ft_ircd 353 w38 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38
+:ft_ircd 353 w38 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 
 :ft_ircd 366 w38 #channel :End of NAMES list
 :w39!user@127.0.0.1 JOIN #channel
 :w40!user@127.0.0.1 JOIN #channel
@@ -1174,7 +1174,7 @@ w39
 
 :w39!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w39 #channel :No topic is set
-:ft_ircd 353 w39 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 w39
+:ft_ircd 353 w39 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 
 :ft_ircd 366 w39 #channel :End of NAMES list
 :w40!user@127.0.0.1 JOIN #channel
 :w41!user@127.0.0.1 JOIN #channel
@@ -1184,7 +1184,7 @@ w40
 
 :w40!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w40 #channel :No topic is set
-:ft_ircd 353 w40 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w40
+:ft_ircd 353 w40 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w40 
 :ft_ircd 366 w40 #channel :End of NAMES list
 :w41!user@127.0.0.1 JOIN #channel
 
@@ -1193,7 +1193,7 @@ w41
 
 :w41!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 w41 #channel :No topic is set
-:ft_ircd 353 w41 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w40 w41
+:ft_ircd 353 w41 = #channel :@w00 w01 w02 w03 w04 w05 w06 w07 w08 w09 w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w40 w41 
 :ft_ircd 366 w41 #channel :End of NAMES list
 
 w42

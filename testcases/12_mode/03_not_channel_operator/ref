@@ -4,7 +4,7 @@ one
 
 :one!user@127.0.0.1 JOIN #ch1
 :ft_ircd 331 one #ch1 :No topic is set
-:ft_ircd 353 one = #ch1 :@one
+:ft_ircd 353 one = #ch1 :@one 
 :ft_ircd 366 one #ch1 :End of NAMES list
 :two!user@127.0.0.1 JOIN #ch1
 
@@ -13,7 +13,7 @@ two
 
 :two!user@127.0.0.1 JOIN #ch1
 :ft_ircd 331 two #ch1 :No topic is set
-:ft_ircd 353 two = #ch1 :@one two
+:ft_ircd 353 two = #ch1 :@one two 
 :ft_ircd 366 two #ch1 :End of NAMES list
 :ft_ircd 482 two #ch1 :You're not channel operator
 :ft_ircd 482 two #ch1 :You're not channel operator

@@ -4,7 +4,7 @@ one
 
 :one!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
-:ft_ircd 353 one = #channel :@one
+:ft_ircd 353 one = #channel :@one 
 :ft_ircd 366 one #channel :End of NAMES list
 :two!user@127.0.0.1 JOIN #channel
 :three!user@127.0.0.1 JOIN #channel
@@ -16,7 +16,7 @@ two
 
 :two!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 two #channel :No topic is set
-:ft_ircd 353 two = #channel :@one two
+:ft_ircd 353 two = #channel :@one two 
 :ft_ircd 366 two #channel :End of NAMES list
 :ft_ircd 341 two three #channel
 :three!user@127.0.0.1 JOIN #channel
@@ -29,10 +29,10 @@ three
 :two!user@127.0.0.1 INVITE three #channel
 :three!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 three #channel :No topic is set
-:ft_ircd 353 three = #channel :@one two three
+:ft_ircd 353 three = #channel :@one two three 
 :ft_ircd 366 three #channel :End of NAMES list
 :three!user@127.0.0.1 PART #channel :three
 :three!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 three #channel :No topic is set
-:ft_ircd 353 three = #channel :@one two three
+:ft_ircd 353 three = #channel :@one two three 
 :ft_ircd 366 three #channel :End of NAMES list

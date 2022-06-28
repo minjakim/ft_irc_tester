@@ -4,7 +4,7 @@ one
 
 :one!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
-:ft_ircd 353 one = #channel :@one
+:ft_ircd 353 one = #channel :@one 
 :ft_ircd 366 one #channel :End of NAMES list
 :two!user@127.0.0.1 JOIN #channel
 :two!user@127.0.0.1 PRIVMSG #channel :hello world
@@ -14,5 +14,5 @@ two
 
 :two!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 two #channel :No topic is set
-:ft_ircd 353 two = #channel :@one two
+:ft_ircd 353 two = #channel :@one two 
 :ft_ircd 366 two #channel :End of NAMES list

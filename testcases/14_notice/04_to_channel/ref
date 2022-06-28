@@ -4,7 +4,7 @@ one
 
 :one!user@127.0.0.1 JOIN #ch
 :ft_ircd 331 one #ch :No topic is set
-:ft_ircd 353 one = #ch :@one
+:ft_ircd 353 one = #ch :@one 
 :ft_ircd 366 one #ch :End of NAMES list
 :two!user@127.0.0.1 JOIN #ch
 :two!user@127.0.0.1 NOTICE #ch :hello world
@@ -14,5 +14,5 @@ two
 
 :two!user@127.0.0.1 JOIN #ch
 :ft_ircd 331 two #ch :No topic is set
-:ft_ircd 353 two = #ch :@one two
+:ft_ircd 353 two = #ch :@one two 
 :ft_ircd 366 two #ch :End of NAMES list

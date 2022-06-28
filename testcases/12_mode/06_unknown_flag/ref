@@ -4,7 +4,7 @@ test
 
 :test!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 test #channel :No topic is set
-:ft_ircd 353 test = #channel :@test
+:ft_ircd 353 test = #channel :@test 
 :ft_ircd 366 test #channel :End of NAMES list
 :ft_ircd 472 test ! :Unknown MODE flag
 :ft_ircd 472 test k :Unknown MODE flag

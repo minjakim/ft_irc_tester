@@ -4,7 +4,7 @@ one
 
 :one!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
-:ft_ircd 353 one = #channel :@one
+:ft_ircd 353 one = #channel :@one 
 :ft_ircd 366 one #channel :End of NAMES list
 :one!user@127.0.0.1 MODE #channel +t
 :one!user@127.0.0.1 TOPIC #channel :hi~

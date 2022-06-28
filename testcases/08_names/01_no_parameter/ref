@@ -4,15 +4,15 @@ one
 
 :one!user@127.0.0.1 JOIN #a
 :ft_ircd 331 one #a :No topic is set
-:ft_ircd 353 one = #a :@one
+:ft_ircd 353 one = #a :@one 
 :ft_ircd 366 one #a :End of NAMES list
 :one!user@127.0.0.1 JOIN #b
 :ft_ircd 331 one #b :No topic is set
-:ft_ircd 353 one = #b :@one
+:ft_ircd 353 one = #b :@one 
 :ft_ircd 366 one #b :End of NAMES list
 :one!user@127.0.0.1 JOIN #c
 :ft_ircd 331 one #c :No topic is set
-:ft_ircd 353 one = #c :@one
+:ft_ircd 353 one = #c :@one 
 :ft_ircd 366 one #c :End of NAMES list
 :two!user@127.0.0.1 JOIN #a
 :two!user@127.0.0.1 JOIN #b
@@ -23,11 +23,11 @@ two
 
 :two!user@127.0.0.1 JOIN #a
 :ft_ircd 331 two #a :No topic is set
-:ft_ircd 353 two = #a :@one two
+:ft_ircd 353 two = #a :@one two 
 :ft_ircd 366 two #a :End of NAMES list
 :two!user@127.0.0.1 JOIN #b
 :ft_ircd 331 two #b :No topic is set
-:ft_ircd 353 two = #b :@one two
+:ft_ircd 353 two = #b :@one two 
 :ft_ircd 366 two #b :End of NAMES list
 :three!user@127.0.0.1 JOIN #a
 
@@ -36,17 +36,17 @@ three
 
 :three!user@127.0.0.1 JOIN #a
 :ft_ircd 331 three #a :No topic is set
-:ft_ircd 353 three = #a :@one two three
+:ft_ircd 353 three = #a :@one two three 
 :ft_ircd 366 three #a :End of NAMES list
 
 four
 |names
 
-:ft_ircd 353 four = #a :@one two three
+:ft_ircd 353 four = #a :@one two three 
 :ft_ircd 366 four #a :End of NAMES list
-:ft_ircd 353 four = #b :@one two
+:ft_ircd 353 four = #b :@one two 
 :ft_ircd 366 four #b :End of NAMES list
-:ft_ircd 353 four = #c :@one
+:ft_ircd 353 four = #c :@one 
 :ft_ircd 366 four #c :End of NAMES list
-:ft_ircd 353 four = * :bot four
+:ft_ircd 353 four = * :bot four 
 :ft_ircd 366 four * :End of NAMES list
