@@ -4,62 +4,62 @@ one
 
 |join #channel
 
-:one!user@localhost JOIN #channel
+:one!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
-:ft_ircd 353 one = #channel :@one 
+:ft_ircd 353 one = #channel :@one
 :ft_ircd 366 one #channel :End of NAMES list
-:two!user@localhost JOIN #channel
-:three!user@localhost JOIN #channel
-:four!user@localhost JOIN #channel
-:five!user@localhost JOIN #channel
-:six!user@localhost JOIN #channel
+:two!user@127.0.0.1 JOIN #channel
+:three!user@127.0.0.1 JOIN #channel
+:four!user@127.0.0.1 JOIN #channel
+:five!user@127.0.0.1 JOIN #channel
+:six!user@127.0.0.1 JOIN #channel
 
 two
 |join #channel
 
-:two!user@localhost JOIN #channel
+:two!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 two #channel :No topic is set
-:ft_ircd 353 two = #channel :@one two 
+:ft_ircd 353 two = #channel :@one two
 :ft_ircd 366 two #channel :End of NAMES list
-:three!user@localhost JOIN #channel
-:four!user@localhost JOIN #channel
-:five!user@localhost JOIN #channel
-:six!user@localhost JOIN #channel
+:three!user@127.0.0.1 JOIN #channel
+:four!user@127.0.0.1 JOIN #channel
+:five!user@127.0.0.1 JOIN #channel
+:six!user@127.0.0.1 JOIN #channel
 
 three
 |join #channel
 
-:three!user@localhost JOIN #channel
+:three!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 three #channel :No topic is set
-:ft_ircd 353 three = #channel :@one two three 
+:ft_ircd 353 three = #channel :@one two three
 :ft_ircd 366 three #channel :End of NAMES list
-:four!user@localhost JOIN #channel
-:five!user@localhost JOIN #channel
-:six!user@localhost JOIN #channel
+:four!user@127.0.0.1 JOIN #channel
+:five!user@127.0.0.1 JOIN #channel
+:six!user@127.0.0.1 JOIN #channel
 
 four
 |join #channel
 
-:four!user@localhost JOIN #channel
+:four!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 four #channel :No topic is set
-:ft_ircd 353 four = #channel :@one two three four 
+:ft_ircd 353 four = #channel :@one two three four
 :ft_ircd 366 four #channel :End of NAMES list
-:five!user@localhost JOIN #channel
-:six!user@localhost JOIN #channel
+:five!user@127.0.0.1 JOIN #channel
+:six!user@127.0.0.1 JOIN #channel
 
 five
 |join #channel
 
-:five!user@localhost JOIN #channel
+:five!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 five #channel :No topic is set
-:ft_ircd 353 five = #channel :@one two three four five 
+:ft_ircd 353 five = #channel :@one two three four five
 :ft_ircd 366 five #channel :End of NAMES list
-:six!user@localhost JOIN #channel
+:six!user@127.0.0.1 JOIN #channel
 
 six
 |join #channel
 
-:six!user@localhost JOIN #channel
+:six!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 six #channel :No topic is set
-:ft_ircd 353 six = #channel :@one two three four five six 
+:ft_ircd 353 six = #channel :@one two three four five six
 :ft_ircd 366 six #channel :End of NAMES list

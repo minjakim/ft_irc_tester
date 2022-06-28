@@ -2,4 +2,4 @@
 one
 |privmsg bot /help
 
-:bot!*@localhost NOTICE one :command list : [/help, /time, /coin]
+:bot!*@127.0.0.1 NOTICE one :command list : [/help, /time, /coin]

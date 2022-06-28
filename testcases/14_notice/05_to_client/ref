@@ -2,4 +2,4 @@
 one
 |notice one :say hello to myself
 
-:one!user@localhost NOTICE one :say hello to myself
+:one!user@127.0.0.1 NOTICE one :say hello to myself

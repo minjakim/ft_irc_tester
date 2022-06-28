@@ -2,22 +2,22 @@
 one
 |join #ch|mode #ch +i|invite two #ch
 
-:one!user@localhost JOIN #ch
+:one!user@127.0.0.1 JOIN #ch
 :ft_ircd 331 one #ch :No topic is set
-:ft_ircd 353 one = #ch :@one 
+:ft_ircd 353 one = #ch :@one
 :ft_ircd 366 one #ch :End of NAMES list
-:one!user@localhost MODE #ch +i
+:one!user@127.0.0.1 MODE #ch +i
 :ft_ircd 341 one two #ch
-:two!user@localhost JOIN #ch
-:two!user@localhost PART #ch :two
+:two!user@127.0.0.1 JOIN #ch
+:two!user@127.0.0.1 PART #ch :two
 
 two
 |join #ch|join #ch|part #ch|join #ch
 
-:one!user@localhost INVITE two #ch
-:two!user@localhost JOIN #ch
+:one!user@127.0.0.1 INVITE two #ch
+:two!user@127.0.0.1 JOIN #ch
 :ft_ircd 331 two #ch :No topic is set
-:ft_ircd 353 two = #ch :@one two 
+:ft_ircd 353 two = #ch :@one two
 :ft_ircd 366 two #ch :End of NAMES list
-:two!user@localhost PART #ch :two
+:two!user@127.0.0.1 PART #ch :two
 :ft_ircd 473 two #ch :Cannot join channel (+i)

@@ -2,15 +2,15 @@
 one
 |join #channel|mode #channel +t|topic #channel :hi~|topic #channel
 
-:one!user@localhost JOIN #channel
+:one!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
-:ft_ircd 353 one = #channel :@one 
+:ft_ircd 353 one = #channel :@one
 :ft_ircd 366 one #channel :End of NAMES list
-:one!user@localhost MODE #channel +t
-:one!user@localhost TOPIC #channel :hi~
+:one!user@127.0.0.1 MODE #channel +t
+:one!user@127.0.0.1 TOPIC #channel :hi~
 :ft_ircd 332 one #channel :hi~
 
 two
 |privmsg two hi
 
-:two!user@localhost PRIVMSG two :hi
+:two!user@127.0.0.1 PRIVMSG two :hi

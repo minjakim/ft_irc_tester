@@ -2,13 +2,13 @@
 one
 |privmsg one :say hello to myself|privmsg two :hi there?
 
-:one!user@localhost PRIVMSG one :say hello to myself
+:one!user@127.0.0.1 PRIVMSG one :say hello to myself
 
 two
 |join #channel
 
-:one!user@localhost PRIVMSG two :hi there?
-:two!user@localhost JOIN #channel
+:one!user@127.0.0.1 PRIVMSG two :hi there?
+:two!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 two #channel :No topic is set
-:ft_ircd 353 two = #channel :@two 
+:ft_ircd 353 two = #channel :@two
 :ft_ircd 366 two #channel :End of NAMES list

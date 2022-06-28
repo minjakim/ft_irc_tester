@@ -2,7 +2,7 @@
 one
 |nick one|privmsg one hi
 
-:one!user@localhost PRIVMSG one :hi
+:one!user@127.0.0.1 PRIVMSG one :hi
 
 two
 |nick one

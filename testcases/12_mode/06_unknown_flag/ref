@@ -2,9 +2,9 @@
 test
 |join #channel|mode #channel !!|mode #channel klaa|mode #channel +jkljjjlzzcxwg|mode #channel ++++++++++!2jgiaejngla;ijg--------tibnz/jkljjjlzzcxwg|mode test !@|mode test prvb|mode test +jkljjjlzzcxwg|mode test ++++++++++!2jgiaejngla;ijg--------tibnz/jkljjjlzzcxwg
 
-:test!user@localhost JOIN #channel
+:test!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 test #channel :No topic is set
-:ft_ircd 353 test = #channel :@test 
+:ft_ircd 353 test = #channel :@test
 :ft_ircd 366 test #channel :End of NAMES list
 :ft_ircd 472 test ! :Unknown MODE flag
 :ft_ircd 472 test k :Unknown MODE flag
@@ -33,7 +33,7 @@ test
 :ft_ircd 472 test c :Unknown MODE flag
 :ft_ircd 472 test x :Unknown MODE flag
 :ft_ircd 472 test w :Unknown MODE flag
-:test!user@localhost MODE #channel +in-in
+:test!user@127.0.0.1 MODE #channel +in-in
 :ft_ircd 501 test :Unknown MODE flag
 :ft_ircd 501 test :Unknown MODE flag
 :ft_ircd 501 test :Unknown MODE flag

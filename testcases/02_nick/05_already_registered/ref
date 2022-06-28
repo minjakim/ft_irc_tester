@@ -2,4 +2,4 @@
 test
 |nick KING
 
-:test!user@localhost NICK KING
+:test!user@127.0.0.1 NICK KING

@@ -2,23 +2,23 @@
 one
 |join #channel|topic #channel|topic #channel :hi~|topic #channel
 
-:one!user@localhost JOIN #channel
+:one!user@127.0.0.1 JOIN #channel
 :ft_ircd 331 one #channel :No topic is set
-:ft_ircd 353 one = #channel :@one 
+:ft_ircd 353 one = #channel :@one
 :ft_ircd 366 one #channel :End of NAMES list
 :ft_ircd 331 one #channel :No topic is set
-:one!user@localhost TOPIC #channel :hi~
+:one!user@127.0.0.1 TOPIC #channel :hi~
 :ft_ircd 332 one #channel :hi~
-:two!user@localhost JOIN #channel
-:two!user@localhost TOPIC #channel :hello~
+:two!user@127.0.0.1 JOIN #channel
+:two!user@127.0.0.1 TOPIC #channel :hello~
 
 two
 |join #channel|topic #channel|topic #channel :hello~|topic #channel
 
-:two!user@localhost JOIN #channel
+:two!user@127.0.0.1 JOIN #channel
 :ft_ircd 332 two #channel :hi~
-:ft_ircd 353 two = #channel :@one two 
+:ft_ircd 353 two = #channel :@one two
 :ft_ircd 366 two #channel :End of NAMES list
 :ft_ircd 332 two #channel :hi~
-:two!user@localhost TOPIC #channel :hello~
+:two!user@127.0.0.1 TOPIC #channel :hello~
 :ft_ircd 332 two #channel :hello~
