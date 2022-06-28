@@ -33,4 +33,4 @@ make fclean -C ./testserver/
 
 pkill -P $$
 
-./diff.sh
+./diff.sh $1
