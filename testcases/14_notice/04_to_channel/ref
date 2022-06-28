@@ -1,3 +1,4 @@
+
 one
 |join #ch
 
@@ -7,6 +8,7 @@ one
 :ft_ircd 366 one #ch :End of NAMES list
 :two!user@localhost JOIN #ch
 :two!user@localhost NOTICE #ch :hello world
+
 two
 |join #ch|notice #ch :hello world
 

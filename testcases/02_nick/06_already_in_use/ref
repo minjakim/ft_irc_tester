@@ -1,7 +1,9 @@
+
 one
 |nick one|privmsg one hi
 
 :one!user@localhost PRIVMSG one :hi
+
 two
 |nick one
 

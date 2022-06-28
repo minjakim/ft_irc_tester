@@ -1,3 +1,4 @@
+
 test
 |join #channel|mode #channel +i|mode #channel|mode #channel -i|mode #channel|mode #channel +n|mode #channel|mode #channel -n|mode #channel|mode #channel +t|mode #channel|mode #channel -t|mode #channel|mode #channel +i-i+i-i|mode #channel|mode #channel +int|mode #channel|mode #channel -int|mode #channel|mode #channel +it-nt|mode #channel|mode #channel it|mode #channel|mode #channel --------i++++++++int--------i|mode #channel
 

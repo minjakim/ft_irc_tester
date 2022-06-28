@@ -1,3 +1,4 @@
+
 one
 |join #channel
 
@@ -7,6 +8,7 @@ one
 :ft_ircd 366 one #channel :End of NAMES list
 :two!user@localhost JOIN #channel
 :two!user@localhost PART #channel :two
+
 two
 |join #channel|part #channel
 

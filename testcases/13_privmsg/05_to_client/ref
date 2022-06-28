@@ -1,7 +1,9 @@
+
 one
 |privmsg one :say hello to myself|privmsg two :hi there?
 
 :one!user@localhost PRIVMSG one :say hello to myself
+
 two
 |join #channel
 

@@ -1,3 +1,4 @@
+
 one
 |join #channel
 
@@ -7,6 +8,7 @@ one
 :ft_ircd 366 one #channel :End of NAMES list
 :two!user@localhost JOIN #channel
 :two!user@localhost PRIVMSG #channel :hello world
+
 two
 |join #channel|privmsg #channel :hello world
 

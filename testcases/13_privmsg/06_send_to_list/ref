@@ -1,3 +1,4 @@
+
 one
 |join #a,#b,#c|privmsg #a,#b,#c,one :message bomb
 

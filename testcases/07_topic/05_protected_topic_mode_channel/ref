@@ -1,3 +1,4 @@
+
 one
 |join #channel|mode #channel +t|topic #channel :hi~|topic #channel
 
@@ -8,6 +9,7 @@ one
 :one!user@localhost MODE #channel +t
 :one!user@localhost TOPIC #channel :hi~
 :ft_ircd 332 one #channel :hi~
+
 two
 |privmsg two hi
 

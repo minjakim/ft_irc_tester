@@ -17,10 +17,9 @@ void
     _length          = read(_fd, _buffer, BUFFER_MAX);
     _buffer[_length] = '\0';
     _result.append(_buffer);
-    result.open(DIR + _path + RESULT, std::fstream::out | std::fstream::app);
+    result.open(_path + RESULT, std::fstream::out | std::fstream::app);
     if (result.is_open())
-        result << _nick << "\n" << _result;
-    result.flush();
+        result << "\n" << _nick << "\n" << _result;
     result.close();
 }
 

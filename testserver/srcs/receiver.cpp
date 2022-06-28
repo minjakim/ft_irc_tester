@@ -3,15 +3,21 @@
 void
     Receiver::m_diff(const std::string& path)
 {
-    std::string result("echo ");
-    result.append(path);
-    result.append(" >> diff");
-    system(result.c_str());
     std::string diff("diff ");
-    diff.append(DIR + path + "result ");
-    diff.append(DIR + path + "ref ");
-    diff.append(">> diff");
-    system(diff.c_str());
+    diff.append(path + "result ");
+    diff.append(path + "ref ");
+    if (system(diff.c_str()))
+    {
+        std::string result("echo ");
+        result.append(path);
+        result.append(" >> diff");
+        system(result.c_str());
+        std::string diff("diff ");
+        diff.append(path + "result ");
+        diff.append(path + "ref ");
+        diff.append(">> diff");
+        system(diff.c_str());
+    }
 }
 
 void
@@ -26,14 +32,15 @@ void
 void
     Receiver::m_received()
 {
-    bool   mode  = false;
-    t_vstr lines = split(Socket::_buffer, '\n');
-    t_vstr nicks = split(lines[1], ',');
-    Worker worker[nicks.size()];
-    int    size = nicks.size();
+    bool        mode  = false;
+    t_vstr      lines = split(Socket::_buffer, '\n');
+    t_vstr      nicks = split(lines[1], ',');
+    std::string path  = (DIR + lines[0]);
+    Worker      worker[nicks.size()];
+    int         size = nicks.size();
 
 #if REF == 0
-    m_trunc(lines[0]);
+    m_trunc(path);
 #endif
     if (nicks[0].front() == '!')
     {
@@ -42,12 +49,12 @@ void
     }
 
     for (int i = 0; i < size; ++i)
-        worker[i] = Worker(lines[0], nicks[i], lines[i + 2], _port);
+        worker[i] = Worker(path, nicks[i], lines[i + 2], _port);
     for (int i = 0; i < size; ++i)
         worker[i].run();
+    usleep(500000);
     if (mode)
     {
-        sleep(1);
         worker[0]._job = split(lines[lines.size() - 1], '|');
         worker[0].run();
         sleep(1);
@@ -56,9 +63,9 @@ void
         worker[i].flush();
     for (int i = 0; i < size; ++i)
         worker[i].quit();
-#if REF == 0
-    m_diff(lines[0]);
-#endif
+    //#if REF == 0
+    //    m_diff(path);
+    //#endif
 }
 
 void

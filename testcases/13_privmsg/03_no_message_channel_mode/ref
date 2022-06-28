@@ -1,3 +1,4 @@
+
 one
 |join #channel|mode #channel +n
 
@@ -8,6 +9,7 @@ one
 :one!user@localhost MODE #channel +n
 :two!user@localhost JOIN #channel
 :two!user@localhost PRIVMSG #channel :god of thunder
+
 two
 |privmsg #channel :hello world|join #channel|privmsg #channel :god of thunder
 

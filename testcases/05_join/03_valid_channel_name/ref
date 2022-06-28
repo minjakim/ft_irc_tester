@@ -1,3 +1,4 @@
+
 test
 |join #channel|join #1,#2,#3|join ##|join #|join #this_is_channel
 

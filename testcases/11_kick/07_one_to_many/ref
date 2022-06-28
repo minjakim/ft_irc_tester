@@ -1,3 +1,4 @@
+
 one
 |join #channel
 
@@ -12,6 +13,7 @@ one
 :four!user@localhost JOIN #channel
 :five!user@localhost JOIN #channel
 :six!user@localhost JOIN #channel
+
 two
 |join #channel
 
@@ -23,6 +25,7 @@ two
 :four!user@localhost JOIN #channel
 :five!user@localhost JOIN #channel
 :six!user@localhost JOIN #channel
+
 three
 |join #channel
 
@@ -33,6 +36,7 @@ three
 :four!user@localhost JOIN #channel
 :five!user@localhost JOIN #channel
 :six!user@localhost JOIN #channel
+
 four
 |join #channel
 
@@ -42,6 +46,7 @@ four
 :ft_ircd 366 four #channel :End of NAMES list
 :five!user@localhost JOIN #channel
 :six!user@localhost JOIN #channel
+
 five
 |join #channel
 
@@ -50,6 +55,7 @@ five
 :ft_ircd 353 five = #channel :@one two three four five 
 :ft_ircd 366 five #channel :End of NAMES list
 :six!user@localhost JOIN #channel
+
 six
 |join #channel
 

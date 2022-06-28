@@ -1,3 +1,4 @@
+
 one
 |join #a,#b,#c,#d
 
@@ -22,6 +23,7 @@ one
 :two!user@localhost JOIN #c
 :three!user@localhost JOIN #a
 :three!user@localhost JOIN #b
+
 two
 |join #a,#b,#c
 
@@ -39,6 +41,7 @@ two
 :ft_ircd 366 two #c :End of NAMES list
 :three!user@localhost JOIN #a
 :three!user@localhost JOIN #b
+
 three
 |join #a,#b|list #a|list #a,#b,#c
 

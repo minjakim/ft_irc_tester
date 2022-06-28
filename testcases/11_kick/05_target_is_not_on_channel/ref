@@ -1,3 +1,4 @@
+
 one
 |join #channel|kick #channel two
 
@@ -7,6 +8,7 @@ one
 :ft_ircd 366 one #channel :End of NAMES list
 :ft_ircd 441 one two #channel :They aren't on that channel
 :two!user@localhost JOIN #channel
+
 two
 |join #channel
 

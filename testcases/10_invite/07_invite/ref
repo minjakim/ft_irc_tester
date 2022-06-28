@@ -1,3 +1,4 @@
+
 one
 |join #channel
 
@@ -9,6 +10,7 @@ one
 :three!user@localhost JOIN #channel
 :three!user@localhost PART #channel :three
 :three!user@localhost JOIN #channel
+
 two
 |join #channel|invite three #channel
 
@@ -20,6 +22,7 @@ two
 :three!user@localhost JOIN #channel
 :three!user@localhost PART #channel :three
 :three!user@localhost JOIN #channel
+
 three
 |join #channel|part #channel|join #channel
 

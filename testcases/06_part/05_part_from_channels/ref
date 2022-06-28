@@ -1,3 +1,4 @@
+
 one
 |join #a,#b,#c,#d,#e,#f,#g
 
@@ -43,6 +44,7 @@ one
 :two!user@localhost PART #e :two
 :two!user@localhost PART #f :two
 :two!user@localhost PART #g :two
+
 two
 |join #a,#b,#c,#d,#e,#f,#g|part #a,#b,#c,#d,#e,#f,#g
 

@@ -1,3 +1,4 @@
+
 one
 |join #a,#b,#c
 
@@ -16,6 +17,7 @@ one
 :two!user@localhost JOIN #a
 :two!user@localhost JOIN #b
 :three!user@localhost JOIN #a
+
 two
 |join #a,#b
 
@@ -28,6 +30,7 @@ two
 :ft_ircd 353 two = #b :@one two 
 :ft_ircd 366 two #b :End of NAMES list
 :three!user@localhost JOIN #a
+
 three
 |join #a
 
@@ -35,6 +38,7 @@ three
 :ft_ircd 331 three #a :No topic is set
 :ft_ircd 353 three = #a :@one two three 
 :ft_ircd 366 three #a :End of NAMES list
+
 four
 |names #a|names #a,#b|names #a,#b,#c
 
