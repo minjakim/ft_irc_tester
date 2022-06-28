@@ -53,8 +53,8 @@ three
 :ft_ircd 331 three #b :No topic is set
 :ft_ircd 353 three = #b :@one two three 
 :ft_ircd 366 three #b :End of NAMES list
-:ft_ircd 322 three #a 2 :
-:ft_ircd 322 three #b 2 :
+:ft_ircd 322 three #a 1 :
+:ft_ircd 322 three #b 1 :
 :ft_ircd 322 three #c 1 :
-:ft_ircd 322 three #d 0 :
+:ft_ircd 322 three #d 1 :
 :ft_ircd 323 three :End of LIST
