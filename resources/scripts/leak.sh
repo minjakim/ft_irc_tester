@@ -2,7 +2,7 @@
 
 while [ true ]
 do
-	leaks ircserv > /dev/null
+	leaks ircserv #> /dev/null
 	sleep 5;
 	clear;
 done
