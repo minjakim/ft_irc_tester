@@ -2,7 +2,7 @@
 
 rm result
 
-DIR="./testcases/"
+DIR="./testcases"
 
 if [ $# -eq 0 ]; then
 	LIST=$(/bin/ls $DIR)
@@ -21,6 +21,8 @@ do
 			echo $list/$case
 			echo $RESULT >> result
 			echo
+		else
+			rm $DIR/$list/$case/result
 		fi
 	done
 done

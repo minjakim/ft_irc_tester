@@ -11,7 +11,7 @@ make re -C ./testserver/
 ./testserver/receiver 6666 6667 > /dev/null&
 sleep 2
 
-DIR="./testcases/"
+DIR="./testcases"
 
 if [ $# -eq 0 ]; then
 	LIST=$(/bin/ls $DIR)
