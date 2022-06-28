@@ -27,7 +27,10 @@ do
 	done
 done
 
-cat result
+if [ -e ./result ]
+then
+	cat result
+fi
 
 #./testcases/01_pass/00_no_parameter/case
 #./testcases/01_pass/01_wrong_password/case
